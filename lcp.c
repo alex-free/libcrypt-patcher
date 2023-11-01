@@ -5,7 +5,7 @@
 //#include "test-ppf3-without-undo.h"
 //#include "test-ppf3-with-undo.h"
 
-#define VER "1.0"
+#define VER "1.0.1"
 
 unsigned char sectors[0x1800]; // 0x800 * 3
 
@@ -105,7 +105,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_014_31_PPF, SCES_014_31_PPF_len, bin);
 	}
 	
-	// Jackie Chan Stuntmaster (Europe) /  Jackie Chan Stuntmaster (Recalled and fixed Final) (Europe)
+	// Jackie Chan Stuntmaster (Europe) (Recalled) /  Jackie Chan Stuntmaster (Europe)
 	else if((strcmp(bootfile, "SCES_014.44") == 0))
 	{
 		apply_ppf(SCES_014_44_PPF, SCES_014_44_PPF_len, bin);
@@ -135,13 +135,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_014_95_PPF, SCES_014_95_PPF_len, bin);
 	}
 	
-	// Disney's Tarzan (France)
+	// Disney Tarzan (France)
 	else if((strcmp(bootfile, "SCES_015.16") == 0))
 	{
 		apply_ppf(SCES_015_16_PPF, SCES_015_16_PPF_len, bin);
 	}
 	
-	// Disney's Tarzan (Germany)
+	// Disneys Tarzan (Germany)
 	else if((strcmp(bootfile, "SCES_015.17") == 0))
 	{
 		apply_ppf(SCES_015_17_PPF, SCES_015_17_PPF_len, bin);
@@ -183,7 +183,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_017_01_PPF, SCES_017_01_PPF_len, bin);
 	}
 	
-	// Fussball Live (This Is Football) (Germany)
+	// Fussball Live (Germany)
 	else if((strcmp(bootfile, "SCES_017.02") == 0))
 	{
 		apply_ppf(SCES_017_02_PPF, SCES_017_02_PPF_len, bin);
@@ -195,16 +195,10 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_017_03_PPF, SCES_017_03_PPF_len, bin);
 	}
 	
-	// Esto Es Futbol (This Is Football) Spain
+	// Esto Es Futbol Spain
 	else if((strcmp(bootfile, "SCES_017.04") == 0))
 	{
 		apply_ppf(SCES_017_04_PPF, SCES_017_04_PPF_len, bin);
-	}
-	
-	// Um Jammer Lammy (Europe)
-	else if((strcmp(bootfile, "SCES_017.53") == 0))
-	{
-		apply_ppf(SCES_017_53_PPF, SCES_017_53_PPF_len, bin);
 	}
 	
 	// Speed Freaks (Europe)
@@ -213,7 +207,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_017_63_PPF, SCES_017_63_PPF_len, bin);
 	}
 	
-	// This is Football (Dutch And French Languages) (Europe)
+	// This is Football (Europe) (Fr,NI)
 	else if((strcmp(bootfile, "SCES_018.82") == 0))
 	{
 		apply_ppf(SCES_018_82_PPF, SCES_018_82_PPF_len, bin);
@@ -224,13 +218,6 @@ int main (int argc, const char * argv[])
 	{
 		apply_ppf(SCES_019_09_PPF, SCES_019_09_PPF_len, bin);
 	}
-	/*
-	TODO: Find this disc and do version testing on disc image
-	else if((strcmp(bootfile, "SCES_019.79_BETA") == 0))
-	{
-		apply_ppf(SCES_019_79_BETA_PPF, SCES_019_79_BETA_PPF_len, bin);
-	}
-	*/
 	
 	// Formula One 99 (Europe) (En,Fr,De,It)
 	else if((strcmp(bootfile, "SCES_019.79") == 0))
@@ -250,13 +237,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_020_05_PPF, SCES_020_05_PPF_len, bin);
 	}
 	
-	// Disney Libro Animato Creativo: Mulan (Disney's Mulan: Story Studio) (Italy)
+	// Disney Libro Animato Creativo: Mulan (Italy)
 	else if((strcmp(bootfile, "SCES_020.06") == 0))
 	{
 		apply_ppf(SCES_020_06_PPF, SCES_020_06_PPF_len, bin);
 	}
 	
-	// Disney's Aventura Interactiva: Mulan (Disney's Mulan: Story Studio) (Spain)
+	// Disney's Aventura Interactiva: Mulan (Spain)
 	else if((strcmp(bootfile, "SCES_020.07") == 0))
 	{
 		apply_ppf(SCES_020_07_PPF, SCES_020_07_PPF_len, bin);
@@ -280,7 +267,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_020_30_PPF, SCES_020_30_PPF_len, bin);
 	}
 	
-	// Ape Escape (Spain)
+	// Ape Escape: La Invasión de los Monos (Spain)
 	else if((strcmp(bootfile, "SCES_020.31") == 0))
 	{
 		apply_ppf(SCES_020_31_PPF, SCES_020_31_PPF_len, bin);
@@ -310,38 +297,37 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_021_82_PPF, SCES_021_82_PPF_len, bin);
 	}
 	
-	// Disneyn Tarzan (Finnish)
+	// Disneyn Tarzan (Finland)
 	else if((strcmp(bootfile, "SCES_021.84") == 0))
 	{
 		apply_ppf(SCES_021_84_PPF, SCES_021_84_PPF_len, bin);
 	}
 	
-	// Disney's Tarzan Netherlands
+	// Disney's Tarzan (Netherlands)
 	else if((strcmp(bootfile, "SCES_021.85") == 0))
 	{
 		apply_ppf(SCES_021_85_PPF, SCES_021_85_PPF_len, bin);
 	}
 	
-	// Formula One 99 Europe
+	// Formula One 99 (Europe) (En, Es, Fi)
 	else if((strcmp(bootfile, "SCES_022.22") == 0))
 	{
 		apply_ppf(SCES_022_22_PPF, SCES_022_22_PPF_len, bin);
 	}
 	
-	// Disney's Verhalenstudio: Mulan (Disney's Mulan: Story Studio) (Spain)
+	// Disney's Verhalenstudio: Mulan (Netherlands)
 	else if((strcmp(bootfile, "SCES_022.64") == 0))
 	{
 		apply_ppf(SCES_022_64_PPF, SCES_022_64_PPF_len, bin);
 	}
 	
-	// This Is Soccer (This Is Football) (Australia)
+	// This Is Soccer (Australia)
 	else if((strcmp(bootfile, "SCES_022.69") == 0))
 	{
 		apply_ppf(SCES_022_69_PPF, SCES_022_69_PPF_len, bin);
 	}
 	
-	// Space Debris (Europe) / Space Debris (Beta) (Europe)
-	// TODO: Find Beta and see if it works
+	// Space Debris (Europe)
 	else if((strcmp(bootfile, "SCES_022.90") == 0))
 	{
 		apply_ppf(SCES_022_90_PPF, SCES_022_90_PPF_len, bin);
@@ -353,7 +339,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_023_65_PPF, SCES_023_65_PPF_len, bin);
 	}
 	
-	// Barbie: Aventure Equestre (Barbie: Race & Ride) (France)
+	// Barbie: Aventure Equestre (France)
 	else if((strcmp(bootfile, "SCES_023.66") == 0))
 	{
 		apply_ppf(SCES_023_66_PPF, SCES_023_66_PPF_len, bin);
@@ -384,6 +370,7 @@ int main (int argc, const char * argv[])
 	}
 	
 	// Space Debris (Germany)
+	// TODO: Find Preproduction version
 	else if((strcmp(bootfile, "SCES_024.31") == 0))
 	{
 		apply_ppf(SCES_024_31_PPF, SCES_024_31_PPF_len, bin);
@@ -431,13 +418,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_024_91_PPF, SCES_024_91_PPF_len, bin);
 	}
 	
-	// MediEvil 2 (English, French, and German languages) (Europe)
+	// MediEvil 2 (En,Fr,De) (Europe)
 	else if((strcmp(bootfile, "SCES_025.44") == 0))
 	{
 		apply_ppf(SCES_025_44_PPF, SCES_025_44_PPF_len, bin);
 	}
 	
-	// MediEvil 2 (Italian, Portuguese, and Spanish Languages) (Europe)
+	// MediEvil 2 (Es, It, Pt) (Europe)
 	else if((strcmp(bootfile, "SCES_025.45") == 0))
 	{
 		apply_ppf(SCES_025_45_PPF, SCES_025_45_PPF_len, bin);
@@ -449,13 +436,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_025_46_PPF, SCES_025_46_PPF_len, bin);
 	}
 	
-	// Crash Bash (Europe)
+	// Crash Bash (En,Fr,De,Es,It,Nl) (Europe)
 	else if((strcmp(bootfile, "SCES_028.34") == 0))
 	{
 		apply_ppf(SCES_028_34_PPF, SCES_028_34_PPF_len, bin);
 	}
 
-	// Spyro - Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.0) / Spyro - Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.1)
+	// Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.0) / Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.1)
 	else if((strcmp(bootfile, "SCES_028.35") == 0))
 	{
 		// 000093C7 09 0A
@@ -464,83 +451,23 @@ int main (int argc, const char * argv[])
 		fseek(bin, 0, SEEK_SET);
 		if(ver_check_val == 0x09) // Rev 0
 		{
-			printf("Spyro - Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.0)\n");
+			printf("Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.0)\n");
 			apply_ppf(SCES_028_35_REV_0_PPF, SCES_028_35_REV_0_PPF_len, bin);
 		} else if(ver_check_val == 0x0A) { // Rev 1
-			printf("Spyro - Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.1)\n");
+			printf("Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.1)\n");
 			apply_ppf(SCES_028_35_REV_1_PPF, SCES_028_35_REV_1_PPF_len, bin);
 		} else {
 			printf("Unknown version\n");
 		}
 	}
 	
-	// Disney's The Emperor's New Groove (Europe)
-	else if((strcmp(bootfile, "SCES_030.10") == 0))
-	{
-		apply_ppf(SCES_030_10_PPF, SCES_030_10_PPF_len, bin);
-	}
-	
-	// Disneys Kejserens Nye Flip (Disney's The Emperor's New Groove) (Denmark)
-	else if((strcmp(bootfile, "SCES_030.11") == 0))
-	{
-		apply_ppf(SCES_030_11_PPF, SCES_030_11_PPF_len, bin);
-	}
-	
-	// Disney's Keizer Kuzco (Disney's The Emperor's New Groove) (Netherlands)
-	else if((strcmp(bootfile, "SCES_030.12") == 0))
-	{
-		apply_ppf(SCES_030_12_PPF, SCES_030_12_PPF_len, bin);
-	}
-	
-	// Disneyn Keisarin Uudet Kuviot (Disney's The Emperor's New Groove) (Finnish)
-	else if((strcmp(bootfile, "SCES_030.13") == 0))
-	{
-		apply_ppf(SCES_030_13_PPF, SCES_030_13_PPF_len, bin);
-	}
-	
-	// Disney Kuzco: L'Empereur Mégalo (Disney's The Emperor's New Groove) (France)
-	else if((strcmp(bootfile, "SCES_030.14") == 0))
-	{
-		apply_ppf(SCES_030_14_PPF, SCES_030_14_PPF_len, bin);
-	}
-	
-	// Disneys Ein Königreich für ein Lama (Disney's The Emperor's New Groove) (Germany)
-	else if((strcmp(bootfile, "SCES_030.15") == 0))
-	{
-		apply_ppf(SCES_030_15_PPF, SCES_030_15_PPF_len, bin);
-	}
-	
-	// Disney Le Follie dell'Imperatore (Disney's The Emperor's New Groove) (Italy)
-	else if((strcmp(bootfile, "SCES_030.16") == 0))
-	{
-		apply_ppf(SCES_030_16_PPF, SCES_030_16_PPF_len, bin);
-	}
-	
-	// Disneys Et Kongerike for en Lama (Disney's The Emperor's New Groove) (Norway)
-	else if((strcmp(bootfile, "SCES_030.17") == 0))
-	{
-		apply_ppf(SCES_030_17_PPF, SCES_030_17_PPF_len, bin);
-	}
-	
-	// Disney El Emperador y sus Locuras (Disney's The Emperor's New Groove) (Spain)
-	else if((strcmp(bootfile, "SCES_030.18") == 0))
-	{
-		apply_ppf(SCES_030_18_PPF, SCES_030_18_PPF_len, bin);
-	}
-	
-	// Disneys Kejsarens Nya Stil (Disney's The Emperor's New Groove) (Sweden)
-	else if((strcmp(bootfile, "SCES_030.19") == 0))
-	{
-		apply_ppf(SCES_030_19_PPF, SCES_030_19_PPF_len, bin);
-	}
-	
-	// Prince Naseem Boxing (Europe)
+	// Prince Naseem Boxing (Europe) (En,Fr,De,Es,It)
 	else if((strcmp(bootfile, "SLES_000.17") == 0))
 	{
 		apply_ppf(SLES_000_17_PPF, SLES_000_17_PPF_len, bin);
 	}
 	
-	// Ronaldo V-Football (Dutch, English, French, and Swedish languages) (Europe)
+	// Ronaldo V-Football (En,Fr,Nl,Sv) (Europe)
 	else if((strcmp(bootfile, "SLES_009.95") == 0))
 	{
 		apply_ppf(SLES_009_95_PPF, SLES_009_95_PPF_len, bin);
@@ -570,37 +497,37 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_013_01_PPF, SLES_013_01_PPF_len, bin);
 	}
 	
-	// Le Mans 24 Hours (Europe)
+	// Le Mans 24 Hours (Europe) (En,Fr,De,Es,It,Pt)
 	else if((strcmp(bootfile, "SLES_013.62") == 0))
 	{
 		apply_ppf(SLES_013_62_PPF, SLES_013_62_PPF_len, bin);
 	}
 	
-	// Michelin Rally Masters: Race of Champions (English, German, and Swedish languages) (Europe)
+	// Michelin Rally Masters: Race of Champions (Europe) (En,De,Sv)
 	else if((strcmp(bootfile, "SLES_015.45") == 0))
 	{
 		apply_ppf(SLES_015_45_PPF, SLES_015_45_PPF_len, bin);
 	}
 	
-	// Eagle One: Harrier Attack (Europe)
+	// Eagle One: Harrier Attack (Europe) (En,Fr,De,Es,It)
 	else if((strcmp(bootfile, "SLES_017.15") == 0))
 	{
 		apply_ppf(SLES_017_15_PPF, SLES_017_15_PPF_len, bin);
 	}
 	
-	// UEFA Striker (Europe)
+	// UEFA Striker (Europe) (En,Fr,De,Es,It,Nl)
 	else if((strcmp(bootfile, "SLES_017.33") == 0))
 	{
 		apply_ppf(SLES_017_33_PPF, SLES_017_33_PPF_len, bin);
 	}
 	
-	//  Mission - Impossible (Europe) (En,Fr,De,Es,It)
+	//  Mission: Impossible (Europe) (En,Fr,De,Es,It)
 	else if((strcmp(bootfile, "SLES_019.06") == 0))
 	{
 		apply_ppf(SLES_019_06_PPF, SLES_019_06_PPF_len, bin);
 	}
 	
-	// V-Rally: Championship Edition 2 (Europe)
+	// V-Rally: Championship Edition 2 (Europe) (En,Fr,De)
 	else if((strcmp(bootfile, "SLES_019.07") == 0))
 	{
 		apply_ppf(SLES_019_07_PPF, SLES_019_07_PPF_len, bin);
@@ -642,7 +569,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_020_61_PPF, SLES_020_61_PPF_len, bin);
 	}
 	
-	// Urban Chaos (Europe)
+	// Urban Chaos (Europe) (En,Es,It)
 	else if((strcmp(bootfile, "SLES_020.71") == 0))
 	{
 		apply_ppf(SLES_020_71_PPF, SLES_020_71_PPF_len, bin);
@@ -654,7 +581,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_020_80_PPF, SLES_020_80_PPF_len, bin);
 	}
 	
-	// N-Gen Racing (Europe)
+	// N-Gen Racing (Europe) (En,Fr,De,Es,It)
 	else if((strcmp(bootfile, "SLES_020.86") == 0))
 	{
 		apply_ppf(SLES_020_86_PPF, SLES_020_86_PPF_len, bin);
@@ -714,7 +641,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_022_92_PPF, SLES_022_92_PPF_len, bin);
 	}
 	
-	// Canal+ Premier Manager (Europe)
+	// Canal+ Premier Manager (Europe) (Fr,Es,It)
 	else if((strcmp(bootfile, "SLES_022.93") == 0))
 	{
 		apply_ppf(SLES_022_93_PPF, SLES_022_93_PPF_len, bin);
@@ -738,7 +665,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_023_30_PPF, SLES_023_30_PPF_len, bin);
 	}
 	
-	// Urban Chaos (Italy)
+	// Urban Chaos (France)
 	else if((strcmp(bootfile, "SLES_023.54") == 0))
 	{
 		apply_ppf(SLES_023_54_PPF, SLES_023_54_PPF_len, bin);
@@ -750,13 +677,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_023_55_PPF, SLES_023_55_PPF_len, bin);
 	}
 	
-	// Michelin Rally Masters: Race of Champions (French, Italian, and Spanish languages) (Europe)
+	// Michelin Rally Masters: Race of Champions (Europe) (Fr,Es,It)
 	else if((strcmp(bootfile, "SLES_023.95") == 0))
 	{
 		apply_ppf(SLES_023_95_PPF, SLES_023_95_PPF_len, bin);
 	}
 	
-	// PGA European Tour Golf (French, Italian, and Spanish languages) (Europe) / PGA European Tour Golf (French, Italian, and Spanish languages) (Alt) (Europe)
+	// PGA European Tour Golf (Europe) (Fr, It, Es) / PGA European Tour Golf (Europe) (Fr, It, Es) (Alt)
 	else if((strcmp(bootfile, "SLES_023.96") == 0))
 	{
 		fseek(bin, 0x9820AB8, SEEK_SET);
@@ -764,10 +691,10 @@ int main (int argc, const char * argv[])
 		fseek(bin, 0, SEEK_SET);
 		if(ver_check_val == 0x53)
 		{
-			printf("PGA European Tour Golf (French, Italian, and Spanish languages) (Europe)\n");
+			printf("PGA European Tour Golf (Europe) (Fr, It, Es)\n");
 			apply_ppf(SLES_023_96_PPF, SLES_023_96_PPF_len, bin);
 		} else if(ver_check_val == 0xCC) {
-			printf("PGA European Tour Golf (French, Italian, and Spanish languages) (Alt) (Europe)\n");
+			printf("PGA European Tour Golf (Europe) (Fr, It, Es) (Alt)\n");
 			apply_ppf(SLES_023_96_ALT_PPF, SLES_023_96_ALT_PPF_len, bin);
 		} else {
 			printf("Error, Unknown version\n");
@@ -775,10 +702,19 @@ int main (int argc, const char * argv[])
 		}
 	}
 	
-	//  Mánager de Liga (Beta) (Spain) - official release does not have LibCrypt protection
+	// Mánager de Liga (Spain) (Preproduction) 
 	else if((strcmp(bootfile, "SLES_024.02") == 0))
 	{
-		apply_ppf(SLES_024_02_PPF, SLES_024_02_PPF_len, bin);
+		// 00009368 EE F1
+		fseek(bin, 0x9368, SEEK_SET);
+		ver_check_val = fgetc(bin);
+		fseek(bin, 0, SEEK_SET);
+		if(ver_check_val == 0xEE) // Final release without LibCrypt protection
+		{
+			printf("This version of the game does not contain LibCrypt protection, no patching required.\n");
+		} else if(ver_check_val == 0xF1) {
+			apply_ppf(SLES_024_02_PPF, SLES_024_02_PPF_len, bin);
+		}
 	}
 	
 	// Resident Evil 3: Nemesis (Europe)
@@ -811,7 +747,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_025_33_PPF, SLES_025_33_PPF_len, bin);
 	}
 	
-	// EA Sports Superbike 2000 (Europe)
+	// EA Sports Superbike 2000 (Europe) (En,Fr,De,Es,It,Sv)
 	else if((strcmp(bootfile, "SLES_025.38") == 0))
 	{
 		apply_ppf(SLES_025_38_PPF, SLES_025_38_PPF_len, bin);
@@ -823,19 +759,19 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_025_63_PPF, SLES_025_63_PPF_len, bin);
 	}
 	
-	// TOCA World Touring Cars (English, French, and German Languages) (Europe)
+	// TOCA World Touring Cars (Europe) (En,Fr,De)
 	else if((strcmp(bootfile, "SLES_025.72") == 0))
 	{
 		apply_ppf(SLES_025_72_PPF, SLES_025_72_PPF_len, bin);
 	}
 	
-	// TOCA World Touring Cars (Italian and Spanish Languages) (Europe)
+	// TOCA World Touring Cars (Europe) (Es,It)
 	else if((strcmp(bootfile, "SLES_025.73") == 0))
 	{
 		apply_ppf(SLES_025_73_PPF, SLES_025_73_PPF_len, bin);
 	}
 	
-	// Ronaldo V-Football (German, Italian, Portuguese, and Spanish languages) (Europe)
+	// Ronaldo V-Football (En,Fr,De,Es,Nl,Sv) (Europe)
 	else if((strcmp(bootfile, "SLES_026.81") == 0))
 	{
 		apply_ppf(SLES_026_81_PPF, SLES_026_81_PPF_len, bin);
@@ -847,7 +783,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_026_88_PPF, SLES_026_88_PPF_len, bin);
 	}
 	
-	// Need for Speed: Porsche 2000 (English, German, and Swedish languages) (Europe)
+	// Need for Speed: Porsche 2000 (Europe) (En,De,Sv)
 	else if((strcmp(bootfile, "SLES_026.89") == 0))
 	{
 		apply_ppf(SLES_026_89_PPF, SLES_026_89_PPF_len, bin);
@@ -859,7 +795,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_026_98_PPF, SLES_026_98_PPF_len, bin);
 	}
 	
-	// Need for Speed: Porsche 2000 (French, Italian, and Spanish languages) (Europe)
+	// Need for Speed: Porsche 2000 (Europe) (Fr,It,Es)
 	else if((strcmp(bootfile, "SLES_027.00") == 0))
 	{
 		apply_ppf(SLES_027_00_PPF, SLES_027_00_PPF_len, bin);
@@ -895,13 +831,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_027_08_PPF, SLES_027_08_PPF_len, bin);
 	}
 	
-	// F1 2000 (Dutch, English, French, and German languages) (Europe)
+	// F1 2000 (Europe) (En,Fr,De,Nl)
 	else if((strcmp(bootfile, "SLES_027.22") == 0))
 	{
 		apply_ppf(SLES_027_22_PPF, SLES_027_22_PPF_len, bin);
 	}
 	
-	// F1 2000 (Danish, English, Finnish, Spanish, and Swedish languages) (Europe)
+	// F1 2000 (Europe) (En,Es,Sv,Da,Fi)
 	else if((strcmp(bootfile, "SLES_027.23") == 0))
 	{
 		apply_ppf(SLES_027_23_PPF, SLES_027_23_PPF_len, bin);
@@ -913,7 +849,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_027_24_PPF, SLES_027_24_PPF_len, bin);
 	}
 	
-	// Walt Disney World Quest: Magical Racing Tour (Europe)
+	// Walt Disney World Quest: Magical Racing Tour (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da)
 	else if((strcmp(bootfile, "SLES_027.33") == 0))
 	{
 		apply_ppf(SLES_027_33_PPF, SLES_027_33_PPF_len, bin);
@@ -937,38 +873,38 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_027_56_PPF, SLES_027_56_PPF_len, bin);
 	}
 	
-	// SnoCross Championship Racing (Europe)
+	// SnoCross Championship Racing (Europe) (En,Fr,De,Es,It)
 	else if((strcmp(bootfile, "SLES_027.63") == 0))
 	{
 		apply_ppf(SLES_027_63_PPF, SLES_027_63_PPF_len, bin);
 	}
 	
-	// Les Cochons de Guerre (Hogs of War) (France)
+	// Les Cochons de Guerre  (France)
 	// TODO: Find Best of Infogrames version and verify it also works (ALT version)
 	else if((strcmp(bootfile, "SLES_027.66") == 0))
 	{
 		apply_ppf(SLES_027_66_PPF, SLES_027_66_PPF_len, bin);
 	}
 	
-	// Frontschweine (Hogs of War) (Germany)
+	// Frontschweine (Germany)
 	else if((strcmp(bootfile, "SLES_027.67") == 0))
 	{
 		apply_ppf(SLES_027_67_PPF, SLES_027_67_PPF_len, bin);
 	}
 	
-	// Marranos en Guerra (Hogs of War) (Spain)
+	// Marranos en Guerra (Spain)
 	else if((strcmp(bootfile, "SLES_027.68") == 0))
 	{
 		apply_ppf(SLES_027_68_PPF, SLES_027_68_PPF_len, bin);
 	}
 	
-	// Hogs of War: Nati per Soffritto (Hogs Of War) (Italy)
+	// Hogs of War: Nati per Soffritto (Italy)
 	else if((strcmp(bootfile, "SLES_027.69") == 0))
 	{
 		apply_ppf(SLES_027_69_PPF, SLES_027_69_PPF_len, bin);
 	}
 	
-	// RC Revenge (Europe)
+	// RC Revenge (Europe) (En,Fr,De,Es)
 	else if((strcmp(bootfile, "SLES_028.24") == 0))
 	{
 		apply_ppf(SLES_028_24_PPF, SLES_028_24_PPF_len, bin);
@@ -986,7 +922,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_028_31_PPF, SLES_028_31_PPF_len, bin);
 	}
 	
-	// Mike Tyson Boxing (Europe)
+	// Mike Tyson Boxing (Europe) (En,Fr,De,Es,It)
 	else if((strcmp(bootfile, "SLES_028.39") == 0))
 	{
 		apply_ppf(SLES_028_39_PPF, SLES_028_39_PPF_len, bin);
@@ -1184,14 +1120,14 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_329_69_PPF, SLES_329_69_PPF_len, bin);
 	}
 	
-	// LMA Manager 2001 (Europe) / LMA Manager 2001 (Beta) (Europe)
-	// TODO: Find beta and see if it works
+	// LMA Manager 2001 (Europe) / LMA Manager 2001 (Preproduction) (Europe)
+	// TODO: Find Preproduction version
 	else if((strcmp(bootfile, "SLES_029.75") == 0))
 	{
 		apply_ppf(SLES_029_75_PPF, SLES_029_75_PPF_len, bin);
 	}
 	
-	// Roger Lemerre: La Sélection des Champions (France)
+	// Roger Lemerre: La Sélection des Champions 2002 (France)
 	else if((strcmp(bootfile, "SLES_029.76") == 0))
 	{
 		apply_ppf(SLES_029_76_PPF, SLES_029_76_PPF_len, bin);
@@ -1203,13 +1139,13 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_029_77_PPF, SLES_029_77_PPF_len, bin);
 	}
 	
-	// Football Manager Campionato 2001 (The F.A. Premier League Football Manager 2001) (Italy)
+	// Football Manager Campionato 2001 (Italy)
 	else if((strcmp(bootfile, "SLES_029.78") == 0))
 	{
 		apply_ppf(SLES_029_78_PPF, SLES_029_78_PPF_len, bin);
 	}
 	
-	// Manager de Liga 2001 (The F.A. Premier League Football Manager 2001) (2001)
+	// Manager de Liga 2001 (Spain)
 	else if((strcmp(bootfile, "SLES_029.79") == 0))
 	{
 		apply_ppf(SLES_029_79_PPF, SLES_029_79_PPF_len, bin);
@@ -1227,7 +1163,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_030_62_PPF, SLES_030_62_PPF_len, bin);
 	}
 	
-	// Disney's 102 Dalmatians - Puppies to the Rescue (Europe)
+	// Disney's 102 Dalmatians: Puppies to the Rescue (Europe) (Fr,De,Es,It,Nl)
 	else if((strcmp(bootfile, "SLES_031.89") == 0))
 	{
 		apply_ppf(SLES_031_89_PPF, SLES_031_89_PPF_len, bin);
@@ -1239,7 +1175,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_031_90_PPF, SLES_031_90_PPF_len, bin);
 	}
 	
-	// Disney's 102 Dalmatians - Puppies to the Rescue (Europe) (Fr,De,Es,It,Nl)
+	// Disney's 102 Dalmatians: Puppies to the Rescue (Europe) (Fr,De,Es,It,Nl)
 	else if((strcmp(bootfile, "SLES_031.91") == 0))
 	{
 		apply_ppf(SLES_031_91_PPF, SLES_031_91_PPF_len, bin);
@@ -1275,7 +1211,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_032_45_PPF, SLES_032_45_PPF_len, bin);
 	}
 	
-	// Asterix - Mega Madness (Europe) (En,Fr,De,Es,It,Nl)
+	// Asterix: Mega Madness (Europe) (En,Fr,De,Es,It,Nl)
 	else if((strcmp(bootfile, "SLES_033.24") == 0))
 	{
 		apply_ppf(SLES_033_24_PPF, SLES_033_24_PPF_len, bin);
@@ -1317,7 +1253,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_035_23_PPF, SLES_035_23_PPF_len, bin);
 	}
 	
-	// Lucky Luke: Western Fever (Europe)
+	// Lucky Luke: Western Fever (Europe) (En,Fr,De,Es,It,Nl)
 	else if((strcmp(bootfile, "SLES_035.30") == 0))
 	{
 		apply_ppf(SLES_035_30_PPF, SLES_035_30_PPF_len, bin);
@@ -1335,7 +1271,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_036_04_PPF, SLES_036_04_PPF_len, bin);
 	}
 	
-	// BFDL Manager 2002 (Germany)
+	// BDFL Manager 2002 (Germany)
 	else if((strcmp(bootfile, "SLES_036.05") == 0))
 	{
 		apply_ppf(SLES_036_05_PPF, SLES_036_05_PPF_len, bin);
@@ -1353,7 +1289,7 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_036_07_PPF, SLES_036_07_PPF_len, bin);
 	}
 	
-	// Italian Job, The (Fr,De,Es)
+	// Italian Job, The (Europe) (Fr,De,Es)
 	else if((strcmp(bootfile, "SLES_036.26") == 0))
 	{
 		apply_ppf(SLES_036_26_PPF, SLES_036_26_PPF_len, bin);
@@ -1365,10 +1301,10 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_036_48_PPF, SLES_036_48_PPF_len, bin);
 	}
 	
-	// OverBlood 2 (Europe) (v1.0) / OverBlood 2 (Europe) (v1.1)
+	// OverBlood 2 (Europe) (Disc 1) (v1.0) / OverBlood 2 (Europe) (Disc 2) (v1.0) /OverBlood 2 (Europe) (Disc 1) (v1.1) / OverBlood 2 (Europe) (Disc 2) (v1.1)
 	else if(
-	((strcmp(bootfile, "SLES_018.79") == 0))
-	|| 	((strcmp(bootfile, "SLES_118.79") == 0))
+	((strcmp(bootfile, "SLES_018.79") == 0)) // Disc 1
+	|| 	((strcmp(bootfile, "SLES_118.79") == 0)) // Disc 2
 	)
 	{
 		apply_ppf(SLES_X18_79_PPF, SLES_X18_79_PPF_len, bin);

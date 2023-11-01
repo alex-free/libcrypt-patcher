@@ -1,0 +1,1085 @@
+	else if((strcmp(bootfile, "SCES_003.11") == 0))
+	{
+		apply_ppf(SCES_003_11_PPF, SCES_003_11_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_014.31") == 0))
+	{
+		apply_ppf(SCES_014_31_PPF, SCES_014_31_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_014.44") == 0))
+	{
+		apply_ppf(SCES_014_44_PPF, SCES_014_44_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_014.92") == 0))
+	{
+		apply_ppf(SCES_014_92_PPF, SCES_014_92_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_014.93") == 0))
+	{
+		apply_ppf(SCES_014_93_PPF, SCES_014_93_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_014.94") == 0))
+	{
+		apply_ppf(SCES_014_94_PPF, SCES_014_94_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_014.95") == 0))
+	{
+		apply_ppf(SCES_014_95_PPF, SCES_014_95_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_015.16") == 0))
+	{
+		apply_ppf(SCES_015_16_PPF, SCES_015_16_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_015.17") == 0))
+	{
+		apply_ppf(SCES_015_17_PPF, SCES_015_17_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_015.18") == 0))
+	{
+		apply_ppf(SCES_015_18_PPF, SCES_015_18_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_015.19") == 0))
+	{
+		apply_ppf(SCES_015_19_PPF, SCES_015_19_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_015.64") == 0))
+	{
+		apply_ppf(SCES_015_64_PPF, SCES_015_64_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_016.95") == 0))
+	{
+		apply_ppf(SCES_016_95_PPF, SCES_016_95_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_017.00") == 0))
+	{
+		apply_ppf(SCES_017_00_PPF, SCES_017_00_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_017.01") == 0))
+	{
+		apply_ppf(SCES_017_01_PPF, SCES_017_01_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_017.02") == 0))
+	{
+		apply_ppf(SCES_017_02_PPF, SCES_017_02_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_017.03") == 0))
+	{
+		apply_ppf(SCES_017_03_PPF, SCES_017_03_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_017.04") == 0))
+	{
+		apply_ppf(SCES_017_04_PPF, SCES_017_04_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_017.63") == 0))
+	{
+		apply_ppf(SCES_017_63_PPF, SCES_017_63_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_018.82") == 0))
+	{
+		apply_ppf(SCES_018_82_PPF, SCES_018_82_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_019.09") == 0))
+	{
+		apply_ppf(SCES_019_09_PPF, SCES_019_09_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_019.79") == 0))
+	{
+		apply_ppf(SCES_019_79_PPF, SCES_019_79_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.04") == 0))
+	{
+		apply_ppf(SCES_020_04_PPF, SCES_020_04_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.05") == 0))
+	{
+		apply_ppf(SCES_020_05_PPF, SCES_020_05_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.06") == 0))
+	{
+		apply_ppf(SCES_020_06_PPF, SCES_020_06_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.07") == 0))
+	{
+		apply_ppf(SCES_020_07_PPF, SCES_020_07_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.28") == 0))
+	{
+		apply_ppf(SCES_020_28_PPF, SCES_020_28_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.29") == 0))
+	{
+		apply_ppf(SCES_020_29_PPF, SCES_020_29_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.30") == 0))
+	{
+		apply_ppf(SCES_020_30_PPF, SCES_020_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_020.31") == 0))
+	{
+		apply_ppf(SCES_020_31_PPF, SCES_020_31_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_021.04") == 0))
+	{
+		apply_ppf(SCES_021_04_PPF, SCES_021_04_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_021.05") == 0))
+	{
+		apply_ppf(SCES_021_05_PPF, SCES_021_05_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_021.81") == 0))
+	{
+		apply_ppf(SCES_021_81_PPF, SCES_021_81_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_021.82") == 0))
+	{
+		apply_ppf(SCES_021_82_PPF, SCES_021_82_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_021.84") == 0))
+	{
+		apply_ppf(SCES_021_84_PPF, SCES_021_84_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_021.85") == 0))
+	{
+		apply_ppf(SCES_021_85_PPF, SCES_021_85_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_022.22") == 0))
+	{
+		apply_ppf(SCES_022_22_PPF, SCES_022_22_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_022.64") == 0))
+	{
+		apply_ppf(SCES_022_64_PPF, SCES_022_64_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_022.69") == 0))
+	{
+		apply_ppf(SCES_022_69_PPF, SCES_022_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_022.90") == 0))
+	{
+		apply_ppf(SCES_022_90_PPF, SCES_022_90_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_023.65") == 0))
+	{
+		apply_ppf(SCES_023_65_PPF, SCES_023_65_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_023.66") == 0))
+	{
+		apply_ppf(SCES_023_66_PPF, SCES_023_66_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_023.67") == 0))
+	{
+		apply_ppf(SCES_023_67_PPF, SCES_023_67_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_023.68") == 0))
+	{
+		apply_ppf(SCES_023_68_PPF, SCES_023_68_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_023.69") == 0))
+	{
+		apply_ppf(SCES_023_69_PPF, SCES_023_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.30") == 0))
+	{
+		apply_ppf(SCES_024_30_PPF, SCES_024_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.31") == 0))
+	{
+		apply_ppf(SCES_024_31_PPF, SCES_024_31_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.32") == 0))
+	{
+		apply_ppf(SCES_024_32_PPF, SCES_024_32_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.33") == 0))
+	{
+		apply_ppf(SCES_024_33_PPF, SCES_024_33_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.87") == 0))
+	{
+		apply_ppf(SCES_024_87_PPF, SCES_024_87_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.88") == 0))
+	{
+		apply_ppf(SCES_024_88_PPF, SCES_024_88_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.89") == 0))
+	{
+		apply_ppf(SCES_024_89_PPF, SCES_024_89_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.90") == 0))
+	{
+		apply_ppf(SCES_024_90_PPF, SCES_024_90_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.91") == 0))
+	{
+		apply_ppf(SCES_024_91_PPF, SCES_024_91_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_025.44") == 0))
+	{
+		apply_ppf(SCES_025_44_PPF, SCES_025_44_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_025.45") == 0))
+	{
+		apply_ppf(SCES_025_45_PPF, SCES_025_45_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_025.46") == 0))
+	{
+		apply_ppf(SCES_025_46_PPF, SCES_025_46_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_028.34") == 0))
+	{
+		apply_ppf(SCES_028_34_PPF, SCES_028_34_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_028.35_REV_0") == 0))
+	{
+		apply_ppf(SCES_028_35_REV_0_PPF, SCES_028_35_REV_0_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_028.35_REV_1") == 0))
+	{
+		apply_ppf(SCES_028_35_REV_1_PPF, SCES_028_35_REV_1_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_000.17") == 0))
+	{
+		apply_ppf(SLES_000_17_PPF, SLES_000_17_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_009.95") == 0))
+	{
+		apply_ppf(SLES_009_95_PPF, SLES_009_95_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_010.41") == 0))
+	{
+		apply_ppf(SLES_010_41_PPF, SLES_010_41_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_012.26") == 0))
+	{
+		apply_ppf(SLES_012_26_PPF, SLES_012_26_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_012.41") == 0))
+	{
+		apply_ppf(SLES_012_41_PPF, SLES_012_41_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_013.01") == 0))
+	{
+		apply_ppf(SLES_013_01_PPF, SLES_013_01_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_013.62") == 0))
+	{
+		apply_ppf(SLES_013_62_PPF, SLES_013_62_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_015.45") == 0))
+	{
+		apply_ppf(SLES_015_45_PPF, SLES_015_45_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_017.15") == 0))
+	{
+		apply_ppf(SLES_017_15_PPF, SLES_017_15_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_017.33") == 0))
+	{
+		apply_ppf(SLES_017_33_PPF, SLES_017_33_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_019.06") == 0))
+	{
+		apply_ppf(SLES_019_06_PPF, SLES_019_06_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_019.07") == 0))
+	{
+		apply_ppf(SLES_019_07_PPF, SLES_019_07_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_019.43") == 0))
+	{
+		apply_ppf(SLES_019_43_PPF, SLES_019_43_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.24") == 0))
+	{
+		apply_ppf(SLES_020_24_PPF, SLES_020_24_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.25") == 0))
+	{
+		apply_ppf(SLES_020_25_PPF, SLES_020_25_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.26") == 0))
+	{
+		apply_ppf(SLES_020_26_PPF, SLES_020_26_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.27") == 0))
+	{
+		apply_ppf(SLES_020_27_PPF, SLES_020_27_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.61") == 0))
+	{
+		apply_ppf(SLES_020_61_PPF, SLES_020_61_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.71") == 0))
+	{
+		apply_ppf(SLES_020_71_PPF, SLES_020_71_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.80") == 0))
+	{
+		apply_ppf(SLES_020_80_PPF, SLES_020_80_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.81") == 0))
+	{
+		apply_ppf(SLES_020_81_PPF, SLES_020_81_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.84") == 0))
+	{
+		apply_ppf(SLES_020_84_PPF, SLES_020_84_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_020.86") == 0))
+	{
+		apply_ppf(SLES_020_86_PPF, SLES_020_86_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_021.12") == 0))
+	{
+		apply_ppf(SLES_021_12_PPF, SLES_021_12_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_021.13") == 0))
+	{
+		apply_ppf(SLES_021_13_PPF, SLES_021_13_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_021.18") == 0))
+	{
+		apply_ppf(SLES_021_18_PPF, SLES_021_18_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.07") == 0))
+	{
+		apply_ppf(SLES_022_07_PPF, SLES_022_07_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.08") == 0))
+	{
+		apply_ppf(SLES_022_08_PPF, SLES_022_08_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.09") == 0))
+	{
+		apply_ppf(SLES_022_09_PPF, SLES_022_09_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.10") == 0))
+	{
+		apply_ppf(SLES_022_10_PPF, SLES_022_10_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.11") == 0))
+	{
+		apply_ppf(SLES_022_11_PPF, SLES_022_11_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.92") == 0))
+	{
+		apply_ppf(SLES_022_92_PPF, SLES_022_92_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_022.93") == 0))
+	{
+		apply_ppf(SLES_022_93_PPF, SLES_022_93_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.28") == 0))
+	{
+		apply_ppf(SLES_023_28_PPF, SLES_023_28_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.29") == 0))
+	{
+		apply_ppf(SLES_023_29_PPF, SLES_023_29_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.30") == 0))
+	{
+		apply_ppf(SLES_023_30_PPF, SLES_023_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.54") == 0))
+	{
+		apply_ppf(SLES_023_54_PPF, SLES_023_54_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.55") == 0))
+	{
+		apply_ppf(SLES_023_55_PPF, SLES_023_55_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.95") == 0))
+	{
+		apply_ppf(SLES_023_95_PPF, SLES_023_95_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.96_ALT") == 0))
+	{
+		apply_ppf(SLES_023_96_ALT_PPF, SLES_023_96_ALT_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_023.96") == 0))
+	{
+		apply_ppf(SLES_023_96_PPF, SLES_023_96_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_024.02") == 0))
+	{
+		apply_ppf(SLES_024_02_PPF, SLES_024_02_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.29") == 0))
+	{
+		apply_ppf(SLES_025_29_PPF, SLES_025_29_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.30") == 0))
+	{
+		apply_ppf(SLES_025_30_PPF, SLES_025_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.31") == 0))
+	{
+		apply_ppf(SLES_025_31_PPF, SLES_025_31_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.32") == 0))
+	{
+		apply_ppf(SLES_025_32_PPF, SLES_025_32_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.33") == 0))
+	{
+		apply_ppf(SLES_025_33_PPF, SLES_025_33_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.38") == 0))
+	{
+		apply_ppf(SLES_025_38_PPF, SLES_025_38_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.63") == 0))
+	{
+		apply_ppf(SLES_025_63_PPF, SLES_025_63_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.72") == 0))
+	{
+		apply_ppf(SLES_025_72_PPF, SLES_025_72_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_025.73") == 0))
+	{
+		apply_ppf(SLES_025_73_PPF, SLES_025_73_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_026.81") == 0))
+	{
+		apply_ppf(SLES_026_81_PPF, SLES_026_81_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_026.88") == 0))
+	{
+		apply_ppf(SLES_026_88_PPF, SLES_026_88_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_026.89") == 0))
+	{
+		apply_ppf(SLES_026_89_PPF, SLES_026_89_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_026.98") == 0))
+	{
+		apply_ppf(SLES_026_98_PPF, SLES_026_98_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.00") == 0))
+	{
+		apply_ppf(SLES_027_00_PPF, SLES_027_00_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.04") == 0))
+	{
+		apply_ppf(SLES_027_04_PPF, SLES_027_04_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.05") == 0))
+	{
+		apply_ppf(SLES_027_05_PPF, SLES_027_05_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.06") == 0))
+	{
+		apply_ppf(SLES_027_06_PPF, SLES_027_06_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.07") == 0))
+	{
+		apply_ppf(SLES_027_07_PPF, SLES_027_07_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.08") == 0))
+	{
+		apply_ppf(SLES_027_08_PPF, SLES_027_08_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.22") == 0))
+	{
+		apply_ppf(SLES_027_22_PPF, SLES_027_22_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.23") == 0))
+	{
+		apply_ppf(SLES_027_23_PPF, SLES_027_23_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.24") == 0))
+	{
+		apply_ppf(SLES_027_24_PPF, SLES_027_24_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.33") == 0))
+	{
+		apply_ppf(SLES_027_33_PPF, SLES_027_33_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.54") == 0))
+	{
+		apply_ppf(SLES_027_54_PPF, SLES_027_54_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.55") == 0))
+	{
+		apply_ppf(SLES_027_55_PPF, SLES_027_55_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.56") == 0))
+	{
+		apply_ppf(SLES_027_56_PPF, SLES_027_56_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.63") == 0))
+	{
+		apply_ppf(SLES_027_63_PPF, SLES_027_63_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.66") == 0))
+	{
+		apply_ppf(SLES_027_66_PPF, SLES_027_66_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.67") == 0))
+	{
+		apply_ppf(SLES_027_67_PPF, SLES_027_67_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.68") == 0))
+	{
+		apply_ppf(SLES_027_68_PPF, SLES_027_68_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_027.69") == 0))
+	{
+		apply_ppf(SLES_027_69_PPF, SLES_027_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.24") == 0))
+	{
+		apply_ppf(SLES_028_24_PPF, SLES_028_24_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.30") == 0))
+	{
+		apply_ppf(SLES_028_30_PPF, SLES_028_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.31") == 0))
+	{
+		apply_ppf(SLES_028_31_PPF, SLES_028_31_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.39") == 0))
+	{
+		apply_ppf(SLES_028_39_PPF, SLES_028_39_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.57") == 0))
+	{
+		apply_ppf(SLES_028_57_PPF, SLES_028_57_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.58") == 0))
+	{
+		apply_ppf(SLES_028_58_PPF, SLES_028_58_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.59") == 0))
+	{
+		apply_ppf(SLES_028_59_PPF, SLES_028_59_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.60") == 0))
+	{
+		apply_ppf(SLES_028_60_PPF, SLES_028_60_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.61") == 0))
+	{
+		apply_ppf(SLES_028_61_PPF, SLES_028_61_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_028.62") == 0))
+	{
+		apply_ppf(SLES_028_62_PPF, SLES_028_62_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.65") == 0))
+	{
+		apply_ppf(SLES_029_65_PPF, SLES_029_65_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.66") == 0))
+	{
+		apply_ppf(SLES_029_66_PPF, SLES_029_66_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.67") == 0))
+	{
+		apply_ppf(SLES_029_67_PPF, SLES_029_67_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.68") == 0))
+	{
+		apply_ppf(SLES_029_68_PPF, SLES_029_68_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.69") == 0))
+	{
+		apply_ppf(SLES_029_69_PPF, SLES_029_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.75") == 0))
+	{
+		apply_ppf(SLES_029_75_PPF, SLES_029_75_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.76") == 0))
+	{
+		apply_ppf(SLES_029_76_PPF, SLES_029_76_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.77") == 0))
+	{
+		apply_ppf(SLES_029_77_PPF, SLES_029_77_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.78") == 0))
+	{
+		apply_ppf(SLES_029_78_PPF, SLES_029_78_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.79") == 0))
+	{
+		apply_ppf(SLES_029_79_PPF, SLES_029_79_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_030.61") == 0))
+	{
+		apply_ppf(SLES_030_61_PPF, SLES_030_61_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_030.62") == 0))
+	{
+		apply_ppf(SLES_030_62_PPF, SLES_030_62_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_031.89") == 0))
+	{
+		apply_ppf(SLES_031_89_PPF, SLES_031_89_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_031.90") == 0))
+	{
+		apply_ppf(SLES_031_90_PPF, SLES_031_90_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_031.91") == 0))
+	{
+		apply_ppf(SLES_031_91_PPF, SLES_031_91_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_032.41") == 0))
+	{
+		apply_ppf(SLES_032_41_PPF, SLES_032_41_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_032.42") == 0))
+	{
+		apply_ppf(SLES_032_42_PPF, SLES_032_42_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_032.43") == 0))
+	{
+		apply_ppf(SLES_032_43_PPF, SLES_032_43_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_032.44") == 0))
+	{
+		apply_ppf(SLES_032_44_PPF, SLES_032_44_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_032.45") == 0))
+	{
+		apply_ppf(SLES_032_45_PPF, SLES_032_45_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_033.24") == 0))
+	{
+		apply_ppf(SLES_033_24_PPF, SLES_033_24_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_034.89") == 0))
+	{
+		apply_ppf(SLES_034_89_PPF, SLES_034_89_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_035.19") == 0))
+	{
+		apply_ppf(SLES_035_19_PPF, SLES_035_19_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_035.20") == 0))
+	{
+		apply_ppf(SLES_035_20_PPF, SLES_035_20_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_035.21") == 0))
+	{
+		apply_ppf(SLES_035_21_PPF, SLES_035_21_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_035.22") == 0))
+	{
+		apply_ppf(SLES_035_22_PPF, SLES_035_22_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_035.23") == 0))
+	{
+		apply_ppf(SLES_035_23_PPF, SLES_035_23_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_035.30") == 0))
+	{
+		apply_ppf(SLES_035_30_PPF, SLES_035_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.03") == 0))
+	{
+		apply_ppf(SLES_036_03_PPF, SLES_036_03_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.04") == 0))
+	{
+		apply_ppf(SLES_036_04_PPF, SLES_036_04_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.05") == 0))
+	{
+		apply_ppf(SLES_036_05_PPF, SLES_036_05_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.06") == 0))
+	{
+		apply_ppf(SLES_036_06_PPF, SLES_036_06_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.07") == 0))
+	{
+		apply_ppf(SLES_036_07_PPF, SLES_036_07_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.26") == 0))
+	{
+		apply_ppf(SLES_036_26_PPF, SLES_036_26_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_036.48") == 0))
+	{
+		apply_ppf(SLES_036_48_PPF, SLES_036_48_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_120.80") == 0))
+	{
+		apply_ppf(SLES_120_80_PPF, SLES_120_80_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_120.81") == 0))
+	{
+		apply_ppf(SLES_120_81_PPF, SLES_120_81_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_120.84") == 0))
+	{
+		apply_ppf(SLES_120_84_PPF, SLES_120_84_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_123.28") == 0))
+	{
+		apply_ppf(SLES_123_28_PPF, SLES_123_28_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_123.29") == 0))
+	{
+		apply_ppf(SLES_123_29_PPF, SLES_123_29_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_123.30") == 0))
+	{
+		apply_ppf(SLES_123_30_PPF, SLES_123_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_129.65") == 0))
+	{
+		apply_ppf(SLES_129_65_PPF, SLES_129_65_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_129.66") == 0))
+	{
+		apply_ppf(SLES_129_66_PPF, SLES_129_66_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_129.67") == 0))
+	{
+		apply_ppf(SLES_129_67_PPF, SLES_129_67_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_129.68") == 0))
+	{
+		apply_ppf(SLES_129_68_PPF, SLES_129_68_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_129.69") == 0))
+	{
+		apply_ppf(SLES_129_69_PPF, SLES_129_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_220.80") == 0))
+	{
+		apply_ppf(SLES_220_80_PPF, SLES_220_80_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_220.81") == 0))
+	{
+		apply_ppf(SLES_220_81_PPF, SLES_220_81_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_220.84") == 0))
+	{
+		apply_ppf(SLES_220_84_PPF, SLES_220_84_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_223.28") == 0))
+	{
+		apply_ppf(SLES_223_28_PPF, SLES_223_28_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_223.29") == 0))
+	{
+		apply_ppf(SLES_223_29_PPF, SLES_223_29_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_223.30") == 0))
+	{
+		apply_ppf(SLES_223_30_PPF, SLES_223_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_229.65") == 0))
+	{
+		apply_ppf(SLES_229_65_PPF, SLES_229_65_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_229.66") == 0))
+	{
+		apply_ppf(SLES_229_66_PPF, SLES_229_66_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_229.67") == 0))
+	{
+		apply_ppf(SLES_229_67_PPF, SLES_229_67_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_229.68") == 0))
+	{
+		apply_ppf(SLES_229_68_PPF, SLES_229_68_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_229.69") == 0))
+	{
+		apply_ppf(SLES_229_69_PPF, SLES_229_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_320.80") == 0))
+	{
+		apply_ppf(SLES_320_80_PPF, SLES_320_80_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_320.81") == 0))
+	{
+		apply_ppf(SLES_320_81_PPF, SLES_320_81_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_320.84") == 0))
+	{
+		apply_ppf(SLES_320_84_PPF, SLES_320_84_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_329.65") == 0))
+	{
+		apply_ppf(SLES_329_65_PPF, SLES_329_65_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_329.66") == 0))
+	{
+		apply_ppf(SLES_329_66_PPF, SLES_329_66_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_329.67") == 0))
+	{
+		apply_ppf(SLES_329_67_PPF, SLES_329_67_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_329.68") == 0))
+	{
+		apply_ppf(SLES_329_68_PPF, SLES_329_68_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_329.69") == 0))
+	{
+		apply_ppf(SLES_329_69_PPF, SLES_329_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X18.79") == 0))
+	{
+		apply_ppf(SLES_X18_79_PPF, SLES_X18_79_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X18.80") == 0))
+	{
+		apply_ppf(SLES_X18_80_PPF, SLES_X18_80_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X20.82") == 0))
+	{
+		apply_ppf(SLES_X20_82_PPF, SLES_X20_82_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X20.83") == 0))
+	{
+		apply_ppf(SLES_X20_83_PPF, SLES_X20_83_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X25.58") == 0))
+	{
+		apply_ppf(SLES_X25_58_PPF, SLES_X25_58_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X25.59") == 0))
+	{
+		apply_ppf(SLES_X25_59_PPF, SLES_X25_59_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X25.60") == 0))
+	{
+		apply_ppf(SLES_X25_60_PPF, SLES_X25_60_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X25.61") == 0))
+	{
+		apply_ppf(SLES_X25_61_PPF, SLES_X25_61_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_X25.62") == 0))
+	{
+		apply_ppf(SLES_X25_62_PPF, SLES_X25_62_PPF_len, bin);
+	}
+

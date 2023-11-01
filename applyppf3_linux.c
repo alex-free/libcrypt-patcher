@@ -13,6 +13,8 @@
  * 
  */
 
+// NOTE: I have commented out but KEPT all the old code that has been changed and or is no longer necessary, for reference - Alex Free
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,6 +24,7 @@
 
 //#define DEBUG
 
+/*
 #if defined(__APPLE__) || defined (MACOSX)
 
 //////////////////////////////////////////////////////////////////////
@@ -31,7 +34,7 @@
 #define	fseeko64		fseeko
 
 //////////////////////////////////////////////////////////////////////
-// ftello is already 64 bit for Darwin/MacOS X!
+// ftellko is already 64 bit for Darwin/MacOS X!
 // ftello64 undefined for Darwin/MacOS X!
 
 #define	ftello64		ftello
@@ -42,7 +45,7 @@
 
 typedef	off_t			__off64_t;
 
-#endif /* __APPLE__ || MACOSX */
+#endif */ /* __APPLE__ || MACOSX */
 
 //////////////////////////////////////////////////////////////////////
 // Macros for little to big Endian conversion.

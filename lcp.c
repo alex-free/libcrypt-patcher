@@ -1354,7 +1354,7 @@ int main (int argc, const char * argv[])
 	}
 	
 	// Final Fantasy VIII (Disc 2) (Spain)
-	else if(((strcmp(bootfile, "SLES_020.84") == 0)))
+	else if(((strcmp(bootfile, "SLES_120.84") == 0)))
 	{
 		apply_ppf(SLES_120_84_PPF, SLES_120_84_PPF_len, bin);
 	}

@@ -5,8 +5,6 @@
 //#include "test-ppf3-without-undo.h"
 //#include "test-ppf3-with-undo.h"
 
-#define VER "1.0.1"
-
 unsigned char sectors[0x1800]; // 0x800 * 3
 
 unsigned char ver_check_val; // for games that have the same bootfile we use the first different byte to detect different revisions/versions
@@ -23,7 +21,7 @@ const unsigned char SLES[] = {
 
 int main (int argc, const char * argv[]) 
 {
-    printf("LibCrypt Patcher v%s By Alex Free (C)2023 (3-BSD)\nhttps://alex-free.github.io/libcrypt-patcher\n\n", VER);
+    printf("LibCrypt Patcher v%s By Alex Free (C)2023-2024 (3-BSD)\nhttps://alex-free.github.io/libcrypt-patcher\n\n", VERSION);
 
     if(argc != 2) {
         printf("incorrect number of arguments\n");

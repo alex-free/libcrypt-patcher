@@ -1,5 +1,3 @@
-# [alex-free.github.io](https://alex-free.github.io)
-
 # LibCrypt Patcher
 
 This patcher is capable of detecting and patching **234 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
@@ -26,22 +24,21 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 ## Downloads
 
-### Version 1.0.2 (2/22/2024)
+### Version 1.0.3 (2/29/2024)
 
 Changes:
 
-*   Fixed Final Fantasy VIII Spain Disc 2 bootfile match, patching this disc now works as intended (thanks [Novacrois](https://github.com/alex-free/libcrypt-patcher/pull/1)).
+*   Now also available as a `.deb` package for x86 Linux systems.
 
-*   Now available as a `.deb` package for x86_64 Linux systems.
+*   More helpful usage message when given no arguments.
 
-*   Build system now passses version number as a `CFLAG` variable.
-
-*	[libcrypt-patcher-v1.0.2-windows\_x86](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-windows-x86.zip) _For Windows 95 OSR 2.5 Or Newer (32-bit Windows)_
-*	[libcrypt-patcher-v1.0.2-windows-x86\_64](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-windows-x86_64.zip) _For 64-bit Windows_
-*	[libcrypt-patcher-v1.0.2-linux-x86](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-linux-x86_static.zip) _For x86 Linux Distros_
-*	[libcrypt-patcher-v1.0.2-linux-x86\_64](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-linux-x86_64_static.zip) _For x86_64 Linux Distros_
-*	[libcrypt-patcher-v1.0.2-linux-x86\_64.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/libcrypt-patcher-1.0.2-amd64.deb) _Deb package file for x86_64 Linux Distros_
-*	[libcrypt-patcher-v1.0.2-source](https://github.com/alex-free/libcrypt-patcher/archive/refs/tags/v1.0.2.zip)
+*	[libcrypt-patcher-v1.0.3-windows\_x86](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-windows-x86.zip) _Portable Release For Windows 95 OSR 2.5 Or Newer (32-bit Windows)_
+*	[libcrypt-patcher-v1.0.3-windows-x86\_64](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-windows-x86_64.zip) _Portable Release For 64-bit Windows_
+*	[libcrypt-patcher-v1.0.3-linux-x86-static](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86-static.zip) _Portable Release For x86 Linux_
+*	[libcrypt-patcher-v1.0.3-linux-x86-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86-static.deb) _Deb package file For x86 Linux_
+*	[libcrypt-patcher-v1.0.3-linux-x86\_64-static](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux_
+*	[libcrypt-patcher-v1.0.3-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86_64-static.deb) _Deb package file for x86_64 Linux_
+*	[libcrypt-patcher-v1.0.3-source](https://github.com/alex-free/libcrypt-patcher/archive/refs/tags/v1.0.3.zip)
 
 [About Previous Versions](changelog.md)
 
@@ -61,7 +58,7 @@ Alternatively you may run `cmd.exe` or `command.com` and run `lcp.exe` with the 
 
 The easiest way to use this on Linux (If your desktop environment supports it that is) is to simply drag the first/only data track bin file of the LibCrypt protected CD image onto the `lcp` executable file.
 
-Alternatively you may start your terminal and run `lcp` with the first/only data track bin file as the sole argument.
+Alternatively you may start your terminal and run `lcp` with the first/only data track bin file as the sole argument. This usage method is recommended if you use the `.deb` package.
 
 ![lcp linux spyro](images/lcp-linux-spyro.png)
 

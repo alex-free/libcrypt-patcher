@@ -1,0 +1,6 @@
+Package: libcrypt-patcher
+Version: 1.0.3
+Maintainer: Alex Free
+Architecture: i386
+Homepage: https://alex-free.github.io/libcrypt-patcher
+Description: The ultimate all in one libcrypt disc image patcher.

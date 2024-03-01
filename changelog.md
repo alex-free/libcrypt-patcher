@@ -1,5 +1,23 @@
 # Changelog
 
+## Version 1.0.2 (2/22/2024)
+
+Changes:
+
+*   Fixed Final Fantasy VIII Spain Disc 2 bootfile match, patching this disc now works as intended (thanks [Novacrois](https://github.com/alex-free/libcrypt-patcher/pull/1)).
+
+*   Now available as a `.deb` package for x86_64 Linux systems.
+
+*   Build system now passses version number as a `CFLAG` variable.
+
+*	[libcrypt-patcher-v1.0.2-windows\_x86](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-windows-x86.zip) _For Windows 95 OSR 2.5 Or Newer (32-bit Windows)_
+*	[libcrypt-patcher-v1.0.2-windows-x86\_64](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-windows-x86_64.zip) _For 64-bit Windows_
+*	[libcrypt-patcher-v1.0.2-linux-x86](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-linux-x86_static.zip) _For x86 Linux Distros_
+*	[libcrypt-patcher-v1.0.2-linux-x86\_64](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/lcp-v1.0.2-linux-x86_64_static.zip) _For x86_64 Linux Distros_
+*	[libcrypt-patcher-v1.0.2-linux-x86\_64.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.2/libcrypt-patcher-1.0.2-amd64.deb) _Deb package file for x86_64 Linux Distros_
+*	[libcrypt-patcher-v1.0.2-source](https://github.com/alex-free/libcrypt-patcher/archive/refs/tags/v1.0.2.zip)
+
+
 ## Version 1.0.1 (11/01/2023)
 
 Changes:

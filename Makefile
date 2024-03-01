@@ -1,6 +1,7 @@
 # lcp GNUMakefile by Alex Free
 PROGRAM=lcp
-VERSION=1.0.2
+RELEASE_NAME=libcrypt-patcher
+VERSION=v1.0.3
 CC=gcc
 C_FLAGS=-Wall -Werror -Os -static -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DVERSION=\"$(VERSION)\"
 RELEASE_FILES=images readme.md changelog.md license.txt
@@ -11,47 +12,57 @@ $(PROGRAM): clean
 clean:
 	rm -rf $(PROGRAM).exe $(PROGRAM)
 
-linux-x86:
+linux-x86: clean
 	make $(PROGRAM) C_FLAGS='-m32 $(C_FLAGS)'
 
-linux-x86_64:
+linux-x86_64: clean
 	make $(PROGRAM)
 
-windows-x86:
+windows-x86: clean
 	make $(PROGRAM) CC="i686-w64-mingw32-gcc"
 
-windows-x86_64:
+windows-x86_64: clean
 	make $(PROGRAM) CC="x86_64-w64-mingw32-gcc"
 
 linux-release:
-	rm -rf $(PROGRAM)-v$(VERSION)-$(PLATFORM) $(PROGRAM)-v$(VERSION)-$(PLATFORM).zip
-	mkdir $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	cp -rv $(PROGRAM) $(RELEASE_FILES) $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	chmod -R 777 $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	zip -r $(PROGRAM)-v$(VERSION)-$(PLATFORM).zip $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	rm -rf $(PROGRAM)-v$(VERSION)-$(PLATFORM)
+	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM) $(PROGRAM)-$(VERSION)-$(PLATFORM).zip
+	mkdir $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	cp -rv $(PROGRAM) $(RELEASE_FILES) $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	chmod -R 777 $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	zip -r $(RELEASE_NAME)-$(VERSION)-$(PLATFORM).zip $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
 
 windows-release:
-	rm -rf $(PROGRAM)-v$(VERSION)-$(PLATFORM) $(PROGRAM)-v$(VERSION)-$(PLATFORM).zip
-	mkdir $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	cp -rv $(PROGRAM).exe $(RELEASE_FILES) $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	chmod -R 777 $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	zip -r $(PROGRAM)-v$(VERSION)-$(PLATFORM).zip $(PROGRAM)-v$(VERSION)-$(PLATFORM)
-	rm -rf $(PROGRAM)-v$(VERSION)-$(PLATFORM)
+	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM) $(PROGRAM)-$(VERSION)-$(PLATFORM).zip
+	mkdir $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	cp -rv $(PROGRAM).exe $(RELEASE_FILES) $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	chmod -R 777 $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	zip -r $(RELEASE_NAME)-$(VERSION)-$(PLATFORM).zip $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
 
 linux-x86-release: linux-x86
-	make linux-release PLATFORM=linux-x86_static
+	make linux-release PLATFORM=linux-x86-static
 
 linux-x86_64-release: linux-x86_64
-	make linux-release PLATFORM=linux-x86_64_static
+	make linux-release PLATFORM=linux-x86_64-static
+
+linux-x86-deb: linux-x86
+	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86-static
+	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86-static/usr/bin
+	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86-static/DEBIAN
+	cp lcp $(RELEASE_NAME)-$(VERSION)-linux-x86-static/usr/bin
+	cp control-x86 $(RELEASE_NAME)-$(VERSION)-linux-x86-static/DEBIAN/control
+	dpkg-deb --build $(RELEASE_NAME)-$(VERSION)-linux-x86-static
+	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86-static
 
 linux-x86_64-deb: linux-x86_64
-	rm -rf libcrypt-patcher-$(VERSION)-amd64
-	mkdir -p libcrypt-patcher-$(VERSION)-amd64/usr/bin
-	mkdir -p libcrypt-patcher-$(VERSION)-amd64/DEBIAN
-	cp lcp libcrypt-patcher-$(VERSION)-amd64/usr/bin
-	cp control libcrypt-patcher-$(VERSION)-amd64/DEBIAN
-	dpkg-deb --build libcrypt-patcher-$(VERSION)-amd64
+	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
+	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/usr/bin
+	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/DEBIAN
+	cp lcp $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/usr/bin
+	cp control-x86_64 $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/DEBIAN/control
+	dpkg-deb --build $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
+	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
 
 windows-x86-release: windows-x86
 	make windows-release PLATFORM=windows-x86
@@ -60,6 +71,6 @@ windows-x86_64-release: windows-x86_64
 	make windows-release PLATFORM=windows-x86_64
 
 clean-build: clean
-	rm -rf *.zip libcrypt-patcher-1.0.2-amd64 libcrypt-patcher-1.0.2-amd64.deb
+	rm -rf *.zip $(RELEASE_NAME)-$(VERSION)-linux-x86-static.deb $(RELEASE_NAME)-$(VERSION)-linux-x86-static $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static.deb $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
 
-all: linux-x86-release linux-x86_64-release linux-x86_64-deb windows-x86-release windows-x86_64-release libcrypt-patcher-$(VERSION)-amd64 libcrypt-patcher-$(VERSION)-amd64.deb
+all: clean-build linux-x86-release linux-x86-deb linux-x86_64-release linux-x86_64-deb windows-x86-release windows-x86_64-release 

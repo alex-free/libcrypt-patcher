@@ -21,7 +21,7 @@ const unsigned char SLES[] = {
 
 int main (int argc, const char * argv[]) 
 {
-    printf("LibCrypt Patcher v%s By Alex Free (C)2023-2024 (3-BSD)\nhttps://alex-free.github.io/libcrypt-patcher\n\n", VERSION);
+    printf("LibCrypt Patcher %s By Alex Free (C)2023-2024 (3-BSD)\nhttps://alex-free.github.io/libcrypt-patcher\n\n", VERSION);
 
     if(argc != 2) {
         printf("incorrect number of arguments\n\nUsage:\n\nlcp <track 1 bin file of libcrypt protected game>\n");

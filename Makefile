@@ -1,76 +1,126 @@
-# lcp GNUMakefile by Alex Free
-PROGRAM=lcp
-RELEASE_NAME=libcrypt-patcher
-VERSION=v1.0.3
-CC=gcc
-C_FLAGS=-Wall -Werror -Os -static -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DVERSION=\"$(VERSION)\"
-RELEASE_FILES=images readme.md changelog.md license.txt
+# EzRe GNUMakefile for Linux/Windows by Alex Free
+
+include variables.mk
+
+COMPILER_FLAGS+=-DVERSION=\"$(VERSION)\"
 
 $(PROGRAM): clean
-	$(CC) $(C_FLAGS) $(PROGRAM).c -o $(PROGRAM)
+	mkdir -p $(BUILD_DIR)
+ifeq ($(strip $(EXECUTABLE_NAME)),)
+	$(COMPILER) $(COMPILER_FLAGS) $(SOURCE_FILES) -o $(BUILD_DIR)/$(PROGRAM)
+else
+	$(COMPILER) $(COMPILER_FLAGS) $(SOURCE_FILES) -o $(BUILD_DIR)/$(EXECUTABLE_NAME)
+endif
 
+.PHONY: deps-apt
+deps-apt:
+	sudo apt update --yes
+	sudo apt install --yes $(BUILD_DEPENDS_APT)
+
+.PHONY: clean
 clean:
-	rm -rf $(PROGRAM).exe $(PROGRAM)
+	rm -rf $(BUILD_DIR)/$(PROGRAM).exe $(BUILD_DIR)/$(PROGRAM)
 
-linux-x86: clean
-	make $(PROGRAM) C_FLAGS='-m32 $(C_FLAGS)'
+.PHONY: clean-build
+clean-build:
+	rm -rf $(BUILD_DIR)
 
+.PHONY: linux-i386
+linux-i386: clean
+	make $(PROGRAM) COMPILER_FLAGS='$(COMPILER_FLAGS_LINUX_X86) $(COMPILER_FLAGS)' EXECUTABLE_NAME='$(PROGRAM).i386'
+
+.PHONY: linux-x86_64
 linux-x86_64: clean
-	make $(PROGRAM)
+	make $(PROGRAM) EXECUTABLE_NAME='$(PROGRAM).x86_64'
 
-windows-x86: clean
-	make $(PROGRAM) CC="i686-w64-mingw32-gcc"
+.PHONY: windows-i686
+windows-i686: clean
+	make $(PROGRAM) COMPILER=$(WINDOWS_X86_COMPILER) EXECUTABLE_NAME='$(PROGRAM).i686.exe'
 
+.PHONY: windows-x86_64
 windows-x86_64: clean
-	make $(PROGRAM) CC="x86_64-w64-mingw32-gcc"
+	make $(PROGRAM) COMPILER=$(WINDOWS_X86_64_COMPILER) EXECUTABLE_NAME='$(PROGRAM).x86_64.exe'
 
-linux-release:
-	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM) $(PROGRAM)-$(VERSION)-$(PLATFORM).zip
-	mkdir $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	cp -rv $(PROGRAM) $(RELEASE_FILES) $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	chmod -R 777 $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	zip -r $(RELEASE_NAME)-$(VERSION)-$(PLATFORM).zip $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+.PHONY: release
+release:
+	rm -rf $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM) $(BUILD_DIR)/$(PROGRAM)-$(VERSION)-$(PLATFORM).zip
+	mkdir $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM)
+ifeq ($(strip $(WINDOWS_RELEASE)),)
+	cp $(BUILD_DIR)/$(EXECUTABLE_NAME) $(BUILD_DIR)/$(PROGRAM)
+	cp -r $(BUILD_DIR)/$(PROGRAM) $(RELEASE_FILES) $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM)
+else
+	cp $(BUILD_DIR)/$(EXECUTABLE_NAME) $(BUILD_DIR)/$(PROGRAM).exe
+	cp -r $(BUILD_DIR)/$(PROGRAM).exe $(RELEASE_FILES) $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM)
+endif
+	chmod -R 777 $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM)
+	cd $(BUILD_DIR) && zip -rq $(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM).zip $(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM)
+	rm -rf $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(PLATFORM)
 
-windows-release:
-	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM) $(PROGRAM)-$(VERSION)-$(PLATFORM).zip
-	mkdir $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	cp -rv $(PROGRAM).exe $(RELEASE_FILES) $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	chmod -R 777 $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	zip -r $(RELEASE_NAME)-$(VERSION)-$(PLATFORM).zip $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
-	rm -rf $(RELEASE_NAME)-$(VERSION)-$(PLATFORM)
+.PHONY: linux-i386-release
+linux-i386-release: linux-i386
+ifeq ($(strip $(LINUX_SPECIFIC_RELEASE_FILES)),)
+	make release PLATFORM='$(LINUX_I386_RELEASE_NAME_SUFFIX)' EXECUTABLE_NAME='$(PROGRAM).i386'
+else
+	make release PLATFORM='$(LINUX_I386_RELEASE_NAME_SUFFIX)' RELEASE_FILES='$(LINUX_SPECIFIC_RELEASE_FILES) $(RELEASE_FILES)' EXECUTABLE_NAME='$(PROGRAM).i386'
+endif
 
-linux-x86-release: linux-x86
-	make linux-release PLATFORM=linux-x86-static
-
+.PHONY: linux-x86_64-release
 linux-x86_64-release: linux-x86_64
-	make linux-release PLATFORM=linux-x86_64-static
+ifeq ($(strip $(LINUX_SPECIFIC_RELEASE_FILES)),)
+	make release PLATFORM='$(LINUX_X86_64_RELEASE_NAME_SUFFIX)' EXECUTABLE_NAME='$(PROGRAM).x86_64'
+else
+	make release PLATFORM='$(LINUX_X86_64_RELEASE_NAME_SUFFIX)' RELEASE_FILES='$(LINUX_SPECIFIC_RELEASE_FILES) $(RELEASE_FILES)' EXECUTABLE_NAME='$(PROGRAM).x86_64'
+endif
 
-linux-x86-deb: linux-x86
-	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86-static
-	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86-static/usr/bin
-	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86-static/DEBIAN
-	cp lcp $(RELEASE_NAME)-$(VERSION)-linux-x86-static/usr/bin
-	cp control-x86 $(RELEASE_NAME)-$(VERSION)-linux-x86-static/DEBIAN/control
-	dpkg-deb --build $(RELEASE_NAME)-$(VERSION)-linux-x86-static
-	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86-static
+.PHONY: windows-i686-release
+windows-i686-release: windows-i686
+ifeq ($(strip $(WINDOWS_SPECIFIC_RELEASE_FILES)),)
+	make release PLATFORM='$(WINDOWS_I686_RELEASE_NAME_SUFFIX)' EXECUTABLE_NAME='$(PROGRAM).i686.exe' WINDOWS_RELEASE=true
+else
+	make release PLATFORM='$(WINDOWS_I686_RELEASE_NAME_SUFFIX)' RELEASE_FILES='$(WINDOWS_SPECIFIC_RELEASE_FILES) $(RELEASE_FILES)' EXECUTABLE_NAME='$(PROGRAM).i686.exe' WINDOWS_RELEASE=true
+endif
 
-linux-x86_64-deb: linux-x86_64
-	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
-	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/usr/bin
-	mkdir -p $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/DEBIAN
-	cp lcp $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/usr/bin
-	cp control-x86_64 $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static/DEBIAN/control
-	dpkg-deb --build $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
-	rm -rf $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
-
-windows-x86-release: windows-x86
-	make windows-release PLATFORM=windows-x86
-
+.PHONY: windows-x86_64-release
 windows-x86_64-release: windows-x86_64
-	make windows-release PLATFORM=windows-x86_64
+ifeq ($(strip $(WINDOWS_SPECIFIC_RELEASE_FILES)),)
+	make release PLATFORM='$(WINDOWS_X86_64_RELEASE_NAME_SUFFIX)' EXECUTABLE_NAME='$(PROGRAM).x86_64.exe' WINDOWS_RELEASE=true
+else
+	make release PLATFORM='$(WINDOWS_X86_64_RELEASE_NAME_SUFFIX)' RELEASE_FILES='$(WINDOWS_SPECIFIC_RELEASE_FILES) $(RELEASE_FILES)' EXECUTABLE_NAME='$(PROGRAM).x86_64.exe' WINDOWS_RELEASE=true
+endif
 
-clean-build: clean
-	rm -rf *.zip $(RELEASE_NAME)-$(VERSION)-linux-x86-static.deb $(RELEASE_NAME)-$(VERSION)-linux-x86-static $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static.deb $(RELEASE_NAME)-$(VERSION)-linux-x86_64-static
+.PHONY: linux-i386-deb
+linux-i386-deb: linux-i386
+	rm -rf $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)
+	mkdir -p $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)/usr/bin
+	mkdir -p $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)/DEBIAN
+	cp $(BUILD_DIR)/$(EXECUTABLE_NAME) $(BUILD_DIR)/$(PROGRAM)
+	cp -r $(BUILD_DIR)/$(PROGRAM) $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)/usr/bin
+	cp control-i386 $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)/DEBIAN/control
+	dpkg-deb --build $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)
+	rm -rf $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_I386_RELEASE_NAME_SUFFIX)
 
-all: clean-build linux-x86-release linux-x86-deb linux-x86_64-release linux-x86_64-deb windows-x86-release windows-x86_64-release 
+.PHONY: linux-x86_64-deb
+linux-x86_64-deb: linux-x86_64
+	rm -rf $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)
+	mkdir -p $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)/usr/bin
+	mkdir -p $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)/DEBIAN
+	cp $(BUILD_DIR)/$(EXECUTABLE_NAME) $(BUILD_DIR)/$(PROGRAM)
+	cp -r $(BUILD_DIR)/$(PROGRAM) $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)/usr/bin
+	cp control-x86_64 $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)/DEBIAN/control
+	dpkg-deb --build $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)
+	rm -rf $(BUILD_DIR)/$(RELEASE_BASE_NAME)-$(VERSION)-$(LINUX_X86_64_RELEASE_NAME_SUFFIX)
+
+.PHONY: all
+all:
+	make clean-build
+	
+	make linux-i386-release 
+	make linux-i386-deb EXECUTABLE_NAME='$(PROGRAM).i386'
+	
+	make linux-x86_64-release 
+	make linux-x86_64-deb EXECUTABLE_NAME='$(PROGRAM).x86_64'
+	
+	make windows-i686-release 
+	make windows-x86_64-release
+	
+	make clean

@@ -19,21 +19,77 @@ const unsigned char SLES[] = {
     0x53, 0x4C, 0x45, 0x53, 0x5F // SLES_
 };
 
+#if defined WIN32 // system("pause"); sucks we can do better
+	#include <conio.h>
+	
+	void pause()
+	{
+		printf("\nPress any key to continue...\n");
+		_getch();
+	}
+#endif
+
+void do_exit(unsigned char exit_code)
+{
+	#if defined WIN32
+		pause();
+	#endif
+	exit(exit_code);
+}
+
 int main (int argc, const char * argv[]) 
 {
+	unsigned int bin_size;
     printf("LibCrypt Patcher %s By Alex Free (C)2023-2024 (3-BSD)\nhttps://alex-free.github.io/libcrypt-patcher\n\n", VERSION);
 
     if(argc != 2) {
         printf("incorrect number of arguments\n\nUsage:\n\nlcp <track 1 bin file of libcrypt protected game>\n");
-        return 1;
+		do_exit(1);
     }
+
     bin = fopen(argv[1], "rb+");
 
     if(bin == NULL)
     {
         printf("Error: Can not open: %s\n", argv[1]);
-        return 1;
+		do_exit(1);
     }
+
+    fseek(bin, 0, SEEK_END);
+    bin_size = ftell(bin);
+
+    if(bin_size < 0x930 * 25) // Minimum expected for correctness of detection functions below - 22-25
+    {
+	    printf("Error: %s is too small to be a patchable track 01 bin file\n", argv[1]);
+        fclose(bin);        
+		do_exit(1);
+    }
+	unsigned char psx_string[] = {
+		0x50, 0x4C, 0x41, 0x59, 0x53, 0x54, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x20 // PLAYSTATION<space>
+	};
+
+	bool is_psx_string;
+	is_psx_string = true;
+
+	unsigned char check;
+
+	for(int i =  0; i < 12; i++)
+	{
+		fseek(bin, (0x9320 + i), SEEK_SET);
+		check = fgetc(bin);
+
+		if(check != psx_string[i])
+		{
+			is_psx_string = false;
+		}
+	}
+
+	if(!is_psx_string)
+	{
+		printf("Error: %s does not appear to be a PlayStation data track bin file.\n", argv[1]);
+		fclose(bin);
+		do_exit(1);
+	}
 
     fseek(bin, (0xCA20 + 0x18), SEEK_SET);// 0x930 * 22 = Directory Record Sector + 0x18 to skip header
             
@@ -1452,8 +1508,10 @@ int main (int argc, const char * argv[])
 
 	else {
 		printf("Unknown game\n");
-		return(1);
+	    fclose(bin);
+		do_exit(1);
 	}
 
     fclose(bin);
+	do_exit(0);
 }

@@ -17,6 +17,7 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 *   [Wanted Games](#wanted-games)
 *   [Credits](#credits)
 *   [License](#license)
+*   [Building From Source](build.md)
 
 ## Links
 
@@ -24,21 +25,33 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 ## Downloads
 
-### Version 1.0.3 (2/29/2024)
+### Version 1.0.4 (4/1/2024)
 
 Changes:
 
-*   Now also available as a `.deb` package for x86 Linux systems.
+*   Windows version now says "Press any key to continue..." before exiting (for drag 'n drop of file to patch).
 
-*   More helpful usage message when given no arguments.
+*   Fixed version string displayed by executable.
 
-*	[libcrypt-patcher-v1.0.3-windows-x86](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-windows-x86.zip) _Portable Release For Windows 95 OSR 2.5 Or Newer (32-bit Windows)_
-*	[libcrypt-patcher-v1.0.3-windows-x86\_64](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-windows-x86_64.zip) _Portable Release For 64-bit Windows_
-*	[libcrypt-patcher-v1.0.3-linux-x86-static](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86-static.zip) _Portable Release For x86 Linux_
-*	[libcrypt-patcher-v1.0.3-linux-x86-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86-static.deb) _Deb package file For x86 Linux_
-*	[libcrypt-patcher-v1.0.3-linux-x86\_64-static](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux_
-*	[libcrypt-patcher-v1.0.3-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.3/libcrypt-patcher-v1.0.3-linux-x86_64-static.deb) _Deb package file for x86_64 Linux_
-*	[libcrypt-patcher-v1.0.3-source](https://github.com/alex-free/libcrypt-patcher/archive/refs/tags/v1.0.3.zip)
+*   Now utilizes my new [EzRe](https://github.com/alex-free/ezre) build system.
+
+*   Vastly improved detection of valid input files.
+
+----------------------------------------------------
+
+*	[libcrypt-patcher-v1.0.4-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.4-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
+---------------------------------------
 
 [About Previous Versions](changelog.md)
 
@@ -161,7 +174,7 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 
 [Disneys Tarzan (Germany)](http://redump.org/disc/19124/)
 
-[Disneys Tarzan (Italy)](http://redump.org/disc/28199/)
+[Disneys Tarzan (Italy)](http://redump.org/disc/27824/)
 
 [EA Sports Superbike 2000 (Europe) (En,Fr,De,Es,It,Sv)](http://redump.org/disc/26580/)
 

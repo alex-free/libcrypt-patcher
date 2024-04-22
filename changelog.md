@@ -1,5 +1,33 @@
 # Changelog
 
+## Version 1.0.4 (4/1/2024)
+
+Changes:
+
+*   Windows version now says "Press any key to continue..." before exiting (for drag 'n drop of file to patch).
+
+*   Fixed version string displayed by executable.
+
+*   Now utilizes my new [EzRe](https://github.com/alex-free/ezre) build system.
+
+*   Vastly improved detection of valid input files.
+
+----------------------------------------------------
+
+*	[libcrypt-patcher-v1.0.4-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.4-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+
+*	[libcrypt-patcher-v1.0.4-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.4/libcrypt-patcher-v1.0.4-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
+---------------------------------------
+
 ## Version 1.0.3 (2/29/2024)
 
 Changes:

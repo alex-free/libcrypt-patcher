@@ -1361,7 +1361,25 @@ int main (int argc, const char * argv[])
 	|| 	((strcmp(bootfile, "SLES_118.79") == 0)) // Disc 2
 	)
 	{
-		apply_ppf(SLES_X18_79_PPF, SLES_X18_79_PPF_len, bin);
+		// 00009368 17 16 Disc 1 v1.0 vs v1.1
+		// 00009368 F8 F7 Disc 2 v1.0 vs v1.1
+		fseek(bin, 0x9368, SEEK_SET);
+		ver_check_val = fgetc(bin);
+		fseek(bin, 0, SEEK_SET);
+		if(ver_check_val == 0x17) // OverBlood 2 (Europe) (Disc 1) (v1.0)
+		{
+			printf("OverBlood 2 (Europe) (Disc 1) (v1.0)\n");
+			apply_ppf(SLES_X18_79_PPF, SLES_X18_79_PPF_len, bin);
+		} else if(ver_check_val == 0x16) { // OverBlood 2 (Europe) (Disc 1) (v1.1)
+			printf("OverBlood 2 (Europe) (Disc 1) (v1.1) does not contain LibCrypt protection, nothing to patch!)\n");
+		} else if(ver_check_val == 0xF8) { // OverBlood 2 (Europe) (Disc 2) (v1.0)
+			printf("OverBlood 2 (Europe) (Disc 2) (v1.0)\n");
+			apply_ppf(SLES_X18_79_PPF, SLES_X18_79_PPF_len, bin);
+		} else if(ver_check_val == 0xF7) { // OverBlood 2 (Europe) (Disc 2) (v1.1)
+			printf("OverBlood 2 (Europe) (Disc 2) (v1.1) does not contain LibCrypt protection, nothing to patch!)\n");
+		} else {
+			printf("Unknown version\n");
+		}
 	}
 	
 	// OverBlood 2 (Italy)

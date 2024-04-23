@@ -1,6 +1,6 @@
 # LibCrypt Patcher
 
-This patcher is capable of detecting and patching **234 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
+This patcher is capable of detecting and patching **232 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
 
 *   Burn a backup CD-R that works on all soft-mods and hard-mods (even non-stealth mod-chips).
 

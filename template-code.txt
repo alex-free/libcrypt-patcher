@@ -103,6 +103,11 @@
 		apply_ppf(SCES_019_09_PPF, SCES_019_09_PPF_len, bin);
 	}
 
+	else if((strcmp(bootfile, "SCES_019.79_BETA_9_9_1999") == 0))
+	{
+		apply_ppf(SCES_019_79_BETA_9_9_1999_PPF, SCES_019_79_BETA_9_9_1999_PPF_len, bin);
+	}
+
 	else if((strcmp(bootfile, "SCES_019.79") == 0))
 	{
 		apply_ppf(SCES_019_79_PPF, SCES_019_79_PPF_len, bin);
@@ -226,6 +231,11 @@
 	else if((strcmp(bootfile, "SCES_024.30") == 0))
 	{
 		apply_ppf(SCES_024_30_PPF, SCES_024_30_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SCES_024.31_BETA_11_11_1999") == 0))
+	{
+		apply_ppf(SCES_024_31_BETA_11_11_1999_PPF, SCES_024_31_BETA_11_11_1999_PPF_len, bin);
 	}
 
 	else if((strcmp(bootfile, "SCES_024.31") == 0))
@@ -736,6 +746,11 @@
 	else if((strcmp(bootfile, "SLES_029.69") == 0))
 	{
 		apply_ppf(SLES_029_69_PPF, SLES_029_69_PPF_len, bin);
+	}
+
+	else if((strcmp(bootfile, "SLES_029.75_BETA_2_26_2001") == 0))
+	{
+		apply_ppf(SLES_029_75_BETA_2_26_2001_PPF, SLES_029_75_BETA_2_26_2001_PPF_len, bin);
 	}
 
 	else if((strcmp(bootfile, "SLES_029.75") == 0))

@@ -1,5 +1,28 @@
 # Changelog
 
+## Version 1.0.5 (4/22/2024)
+
+Changes:
+
+*   Implemented [smaller less intrusive patches](https://github.com/alex-free/libcrypt-patcher/issues/5) for Final Fantasy VIII Europe Disc 1, Final Fantasy VIII Fance Disc 1, Final Fantasy VIII Germany Disc 1/2/3/4, Final Fantasy VIII Italy Disc 1/2/3/4, Final Fantasy VIII Spain Disc 1, and OverBlood 2 Italy (based on BAD's patch) (thanks [@Littlemouse1968](https://github.com/Littlemouse1968)).
+
+*   OverBlood 2 Europe v1.0 was released with broken LibCrypt protection in the official pressed PSX CD-ROMs resulting in a crash at the end of Episode 2 with even the original disc. This has been fixed with a [new patch](https://github.com/alex-free/libcrypt-patcher/issues/5) (thanks [@Littlemouse1968](https://github.com/Littlemouse1968)). OverBlood 2 Europe [v1.1 removed the broken protection](https://www.ps2-home.com/forum/viewtopic.php?t=1819&start=30), so version detection to the patcher has been added so that nothing will be done for v1.1 Disc 1 or Disc 2.
+
+
+----------------------------------------------------
+
+*	[libcrypt-patcher-v1.0.5-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.5-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+
+*	[libcrypt-patcher-v1.0.5-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.5-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.5-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+
+*	[libcrypt-patcher-v1.0.5-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
 ## Version 1.0.4 (4/1/2024)
 
 Changes:

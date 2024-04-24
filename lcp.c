@@ -273,10 +273,23 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_019_09_PPF, SCES_019_09_PPF_len, bin);
 	}
 	
-	// Formula One 99 (Europe) (En,Fr,De,It)
+	// Formula One 99 (Europe) (En,Fr,De,It) / Formula One 99 (Europe) (En,Fr,De,It) (Beta)
 	else if((strcmp(bootfile, "SCES_019.79") == 0))
 	{
-		apply_ppf(SCES_019_79_PPF, SCES_019_79_PPF_len, bin);
+		// 00009368 A4 E6 0C
+		fseek(bin, 0x9368, SEEK_SET);
+		ver_check_val = fgetc(bin);
+		fseek(bin, 0, SEEK_SET);
+		if(ver_check_val == 0xA4) // Formula One 99 (Europe) (En,Fr,De,It)
+		{
+			printf("Formula One 99 (Europe) (En,Fr,De,It)\n");
+			apply_ppf(SCES_019_79_PPF, SCES_019_79_PPF_len, bin);
+		} else if(ver_check_val == 0xE6) { // Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)
+			printf("Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)\n");
+			apply_ppf(SCES_019_79_BETA_9_9_1999_PPF, SCES_019_79_BETA_9_9_1999_PPF_len, bin);
+		} else {
+			printf("Unknown version\n");
+		}
 	}
 	
 	// Disney Fais Ton Histoire! Mulan (France)
@@ -423,11 +436,23 @@ int main (int argc, const char * argv[])
 		apply_ppf(SCES_024_30_PPF, SCES_024_30_PPF_len, bin);
 	}
 	
-	// Space Debris (Germany)
-	// TODO: Find Preproduction version
+	// Space Debris (Germany) / Space Debris (Germany) (Beta 11/11/1999)
 	else if((strcmp(bootfile, "SCES_024.31") == 0))
 	{
-		apply_ppf(SCES_024_31_PPF, SCES_024_31_PPF_len, bin);
+		// 0000776C 00 3F
+		fseek(bin, 0x776C, SEEK_SET);
+		ver_check_val = fgetc(bin);
+		fseek(bin, 0, SEEK_SET);
+		if(ver_check_val == 0x00) // Space Debris (Germany)
+		{
+			printf("Space Debris (Germany)\n");
+			apply_ppf(SCES_024_31_PPF, SCES_024_31_PPF_len, bin);
+		} else if(ver_check_val == 0x3F) { // Space Debris (Germany) (Beta 11/11/1999)
+			printf("Space Debris (Germany) (Beta 11/11/1999)\n");
+			apply_ppf(SCES_024_31_BETA_11_11_1999_PPF, SCES_024_31_BETA_11_11_1999_PPF_len, bin);
+		} else {
+			printf("Unknown version\n");
+		}
 	}
 	
 	// Space Debris (Italy)
@@ -932,9 +957,9 @@ int main (int argc, const char * argv[])
 	{
 		apply_ppf(SLES_027_63_PPF, SLES_027_63_PPF_len, bin);
 	}
-	
-	// Les Cochons de Guerre  (France)
-	// TODO: Find Best of Infogrames version and verify it also works (ALT version)
+
+	// Les Cochons de Guerre  (France) Rev 0 / Les Cochons de Guerre  (France) (Rev 1)
+	// Both version have same exact data track bin file, just different audio track checksums
 	else if((strcmp(bootfile, "SLES_027.66") == 0))
 	{
 		apply_ppf(SLES_027_66_PPF, SLES_027_66_PPF_len, bin);
@@ -1174,11 +1199,23 @@ int main (int argc, const char * argv[])
 		apply_ppf(SLES_329_69_PPF, SLES_329_69_PPF_len, bin);
 	}
 	
-	// LMA Manager 2001 (Europe) / LMA Manager 2001 (Preproduction) (Europe)
-	// TODO: Find Preproduction version
+	// LMA Manager 2001 (Europe) / LMA Manager 2001 (Europe) (Beta 02/26/2001)
 	else if((strcmp(bootfile, "SLES_029.75") == 0))
 	{
-		apply_ppf(SLES_029_75_PPF, SLES_029_75_PPF_len, bin);
+		// 21764478 81 A3
+		fseek(bin, 0x21764478, SEEK_SET);
+		ver_check_val = fgetc(bin);
+		fseek(bin, 0, SEEK_SET);
+		if(ver_check_val == 0x81) // LMA Manager 2001 (Europe)
+		{
+			printf("LMA Manager 2001 (Europe)\n");
+			apply_ppf(SLES_029_75_PPF, SLES_029_75_PPF_len, bin);
+		} else if(ver_check_val == 0xA3) { // LMA Manager 2001 (Europe) (Beta 02/26/2001)
+			printf("LMA Manager 2001 (Europe) (Beta 02/26/2001)\n");
+			apply_ppf(SLES_029_75_BETA_2_26_2001_PPF, SLES_029_75_BETA_2_26_2001_PPF_len, bin);
+		} else {
+			printf("Unknown version\n");
+		}
 	}
 	
 	// Roger Lemerre: La Sélection des Champions 2002 (France)

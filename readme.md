@@ -1,6 +1,6 @@
 # LibCrypt Patcher
 
-This patcher is capable of detecting and patching **232 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
+This patcher is capable of detecting and patching **236 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
 
 *   Burn a backup CD-R that works on all soft-mods and hard-mods (even non-stealth mod-chips).
 
@@ -14,7 +14,6 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 *   [Downloads](#downloads)
 *   [Supported Games](#supported-games)
-*   [Wanted Games](#wanted-games)
 *   [Credits](#credits)
 *   [License](#license)
 *   [Building From Source](build.md)
@@ -25,28 +24,28 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 ## Downloads
 
-### Version 1.0.5 (4/22/2024)
+## Version 1.0.6 (4/23/2024)
 
 Changes:
 
-*   Implemented [smaller less intrusive patches](https://github.com/alex-free/libcrypt-patcher/issues/5) for Final Fantasy VIII Europe Disc 1, Final Fantasy VIII Fance Disc 1, Final Fantasy VIII Germany Disc 1/2/3/4, Final Fantasy VIII Italy Disc 1/2/3/4, Final Fantasy VIII Spain Disc 1, and OverBlood 2 Italy (based on BAD's patch) (thanks [@Littlemouse1968](https://github.com/Littlemouse1968)).
+*   Implemented [smaller less intrusive patches](https://github.com/alex-free/libcrypt-patcher/issues/5) for Les Cochons de Guerre (France) Rev 0 and Rev 1, (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)).
 
-*   OverBlood 2 Europe v1.0 was released with broken LibCrypt protection in the official pressed PSX CD-ROMs resulting in a crash at the end of Episode 2 with even the original disc. This has been fixed with a [new patch](https://github.com/alex-free/libcrypt-patcher/issues/5) (thanks [@Littlemouse1968](https://github.com/Littlemouse1968)). OverBlood 2 Europe [v1.1 removed the broken protection](https://www.ps2-home.com/forum/viewtopic.php?t=1819&start=30), so version detection to the patcher has been added so that nothing will be done for v1.1 Disc 1 or Disc 2.
-
+*   Added support for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), and [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/),
+ (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)).
 
 ----------------------------------------------------
 
-*	[libcrypt-patcher-v1.0.5-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.6-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.5-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+*	[libcrypt-patcher-v1.0.6-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
 
-*	[libcrypt-patcher-v1.0.5-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.6-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.5-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.6-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.5-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.0.6-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
 
-*	[libcrypt-patcher-v1.0.5-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.5/libcrypt-patcher-v1.0.5-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.0.6-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
 
 ---------------------------------------
 
@@ -273,6 +272,8 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 
 [Formula One 99 (Europe) (En,Fr,De,It)](http://redump.org/disc/969/)
 
+[Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/)
+
 [Frontschweine (Germany)](http://redump.org/disc/19539/)
 
 [Fussball Live (Germany)](http://redump.org/disc/4385/)
@@ -335,11 +336,15 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 
 [Legacy of Kain: Soul Reaver (Spain)](http://redump.org/disc/27944/)
 
-[Les Cochons de Guerre (France)](http://redump.org/disc/33070/)
+[Les Cochons de Guerre (France) (Rev 0)](http://redump.org/disc/33070/)
+
+[Les Cochons de Guerre (France) (Rev 1)](http://redump.org/disc/99695/)
 
 [Marranos en Guerra (Spain)](http://redump.org/disc/48791/)
 
 [LMA Manager 2001 (Europe)](http://redump.org/disc/6847/)
+
+[LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/)
 
 [LMA Manager 2002 (Europe)](http://redump.org/disc/26750/)
 
@@ -463,15 +468,17 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 
 [Space Debris (Germany)](http://redump.org/disc/20213/)
 
+[Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/)
+
 [Space Debris (Italy)](http://redump.org/disc/29592/)
 
 [Space Debris (Spain)](http://redump.org/disc/48046/)
 
 [Speed Freaks (Europe)](http://redump.org/disc/1250/)
 
-[Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.0.1)](http://redump.org/disc/492/)
+[Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (Rev 0)](http://redump.org/disc/492/)
 
-[Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (v1.1)](http://redump.org/disc/19611/)
+[Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (Rev 1](http://redump.org/disc/19611/)
 
 [Spyro 2: Gateway to Glimmer (Europe) (En,Fr,De,Es,It)](http://redump.org/disc/1250/)
 
@@ -540,16 +547,6 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 [Walt Disney World Quest: Magical Racing Tour (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da)](http://redump.org/disc/1848/)
 
 [Wip3out (Europe) (En,Fr,De,Es,It)](http://redump.org/disc/355/)
-
-## Wanted Games
-
-[Formula One 99 (Europe) (Preproduction)](http://redump.org/disc/64499/) - found this on hiddenplace but the patch I had didn't work. Need to develop or port over the exising bypass in a new patch.
-
-[LMA Manager 2001 (Europe) (Preproduction)](http://redump.org/disc/92303/) - can't find this disc image, probably doesn't work with existing patch for the final release.
-
-[Les Cochons de Guerre (France) (Best of Infogrames)](http://redump.org/disc/99695/) - can't find this disc image, but probably already works with existing patch.
-
-[Space Debris (Germany) (Preproduction)](http://redump.org/disc/85814/) - can't find this disc image, probably doesn't work with existing patch for the final release.
 
 ## Credits
 

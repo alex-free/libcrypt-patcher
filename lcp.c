@@ -276,7 +276,7 @@ int main (int argc, const char * argv[])
 	// Formula One 99 (Europe) (En,Fr,De,It) / Formula One 99 (Europe) (En,Fr,De,It) (Beta)
 	else if((strcmp(bootfile, "SCES_019.79") == 0))
 	{
-		// 00009368 A4 E6 0C
+		// 00009368 A4 E6
 		fseek(bin, 0x9368, SEEK_SET);
 		ver_check_val = fgetc(bin);
 		fseek(bin, 0, SEEK_SET);

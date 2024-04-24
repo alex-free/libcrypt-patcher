@@ -6,7 +6,7 @@ This patcher is capable of detecting and patching **236 different PSX game discs
 
 *   Burn a backup CD-R with any burning software, without any additional SBI files. [IMGBurn](https://www.imgburn.com/), [CDRTools](https://alex-free.github.io/cdrtools), [CDRDAO](https://alex-free.github.io/cdrdao/), they all work with the patched image.
 
-*   Use the disc image in an emulator without needing SBI files. [No $ PSX Emu](https://problemkaputt.de/psx.htm) works great (even on Linux with [Lutris/wine](https://lutris.net/)). So does [DuckStation](https://www.duckstation.org/) if you disable the `Require SBI file` option, found in the advanced settings.
+*   Use the disc image in **any** emulator without needing SBI files. [No $ PSX Emu](https://problemkaputt.de/psx.htm) works great (even on Linux with [Lutris/wine](https://lutris.net/)). So does [DuckStation](https://www.duckstation.org/) if you enable the `Allow Booting Without SBI File` option found in the advanced settings. PS3/PS Vita, etc all work.
 
 If you know of a game/revision this patcher does not yet support, can supply a better patch for a game, or improve something else, open a [Github issue](https://github.com/alex-free/libcrypt-patcher/issues).
 

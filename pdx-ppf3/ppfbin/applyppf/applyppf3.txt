@@ -1,0 +1,60 @@
+ApplyPPF v3.0 documentation by Icarus/Paradox
+---------------------------------------------
+
+What is ApplyPPF ?
+------------------
+
+ApplyPPF is part of the commandline distribution of the PPF3.0 tools and
+is used to apply PPF files to binfiles. ApplyPPF3 can handle PPF1.0,
+PPF2.0 and PPF3.0 patches. It will recognize them automatically so you
+don't have to worry about this. It can also be used to undo a PPF3.0
+patch. (Only if undo-data is available of course).
+
+How to use ApplyPPF ?
+---------------------
+
+It is (still) very simple to apply a PPF2.0 patch to a binfile. Here is a
+commandline example to patch a binfile called "game.bin"
+
+ApplyPPF3.exe a game.bin patch.ppf
+
+Command "a" is used for applying a patch.
+If you want to undo a PPF3.0 patch in case undo data is included type the
+following:
+
+ApplyPPF3.exe u game.bin patch.ppf
+
+Command "u" is used for undo patch.
+
+
+Warnings
+--------
+
+If a bin can't be verified the following warning may occour:
+
+1. "The size of the bin file isn't correct, continue ? (y/n): "
+   - This warning should not be taken too seriously as the filesize check
+     isn't really reliable. One more reason for me not to include this one
+     in PPF3.0 anymore. This caused alot more trouble than helped to verify.
+
+2. "Binblock/Patchvalidation failed. continue ? (y/n): "
+   - This warning *IS* actually very accurate and i suggest if you see this
+     cancel for once and check everything (PPF & BIN) once again.
+
+3. "Error: no undo data available"
+   - If you see this errormessage you probably wanted to undo a PPF3.0 patch.
+     This message is self explaining. There is NO chance to undo the patch if
+     the patch creator did not include undo data.
+
+
+Final words
+-----------
+
+You can find precompiled ApplyPPF versions for you favorite OS as they are:
+Win32, Linux (Redhat) and MAX OS-X.
+
+Reference:
+
+- Win32 version was compiled on a PC using Visual C++ by Microsoft Corp.
+- Linux version was compiled on Redhat linux 7.0 using gcc.
+- Mac version was compiled on and for MAC OS-X.

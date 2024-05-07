@@ -1,0 +1,10 @@
+Contents the PPF3.0 FULL Distribution:
+
+- ApplyPPF3 sourcecodes.
+- MakePPF3 sourcecodes.
+
+- ApplyPPF3 console tools (Linux, Win32, MAC OS-X)
+- MakePPF3 console tools (Linux, Win32, MAC OS-X)
+
+- GUI Version of ApplyPPF3 (PPF-O-MATIC v3.0)
+  For Windows 9x, NT, 2K, XP and for MAC OS-X.

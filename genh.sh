@@ -15,4 +15,8 @@ for f in *.PPF; do
     # change XXXX_XXX.XX to XXXX_XXX_XX
     header=$(echo "$base" | sed 's/\(.\{8\}\)./\1_/')
     echo -e "\telse if((strcmp(bootfile, \""$base"\") == 0))\n\t{\n\t\tapply_ppf("$header"_PPF, "$header"_PPF_len, bin);\n\t}\n" >> ../template-code.txt
+
+    count=$((count+1))
 done
+
+echo "Generated $count headers"

@@ -1,5 +1,30 @@
 # Changelog
 
+## Version 1.0.6 (4/23/2024)
+
+Changes:
+
+*   Implemented [smaller less intrusive patches](https://github.com/alex-free/libcrypt-patcher/issues/5) for Les Cochons de Guerre (France) Rev 0 and Rev 1, (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)).
+
+*   Added support for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), and [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/),
+ (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)).
+
+----------------------------------------------------
+
+*	[libcrypt-patcher-v1.0.6-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.6-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+
+*	[libcrypt-patcher-v1.0.6-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.6-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.6-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+
+*	[libcrypt-patcher-v1.0.6-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
+---------------------------------------
+
 ## Version 1.0.5 (4/22/2024)
 
 Changes:

@@ -958,6 +958,11 @@
 		apply_ppf(SLES_129_69_PPF, SLES_129_69_PPF_len, bin);
 	}
 
+	else if((strcmp(bootfile, "SLES1979.02_PROTOTYPE") == 0))
+	{
+		apply_ppf(SLES1979_02_PROTOTYPE_PPF, SLES1979_02_PROTOTYPE_PPF_len, bin);
+	}
+
 	else if((strcmp(bootfile, "SLES_220.80") == 0))
 	{
 		apply_ppf(SLES_220_80_PPF, SLES_220_80_PPF_len, bin);

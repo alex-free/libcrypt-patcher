@@ -190,6 +190,7 @@
 #include "ppf-c/SLES_129.67.PPF.h"
 #include "ppf-c/SLES_129.68.PPF.h"
 #include "ppf-c/SLES_129.69.PPF.h"
+#include "ppf-c/SLES1979.02_PROTOTYPE.PPF.h"
 #include "ppf-c/SLES_220.80.PPF.h"
 #include "ppf-c/SLES_220.81.PPF.h"
 #include "ppf-c/SLES_220.84.PPF.h"

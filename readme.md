@@ -1,14 +1,18 @@
 # LibCrypt Patcher
 
-This patcher is capable of detecting and patching **236 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
+This patcher is capable of detecting and patching **237 different PSX game discs containing LibCrypt protection**. After using this patcher on a supported LibCrypt protected PSX disc image you can then:
 
-*   Burn a backup CD-R that works on all soft-mods and hard-mods (even non-stealth mod-chips).
+*   Burn a backup CD-R with any burning software, **without any additional SBI files**. [IMGBurn](https://www.imgburn.com/), [CDRDAO](https://alex-free.github.io/cdrdao/), they all work with the patched image. The burned disc will **work on any real PS1/PS2 hardware.**
 
-*   Burn a backup CD-R with any burning software, without any additional SBI files. [IMGBurn](https://www.imgburn.com/), [CDRTools](https://alex-free.github.io/cdrtools), [CDRDAO](https://alex-free.github.io/cdrdao/), they all work with the patched image.
+*   Use the disc image in an emulator **without needing SBI files**. [No $ PSX Emu](https://problemkaputt.de/psx.htm) works great (even on Linux with [Lutris/wine](https://lutris.net/)). So does [DuckStation](https://www.duckstation.org/) **with some [additional configuration](#duckstation-specific-instructions)**.
 
-*   Use the disc image in **any** emulator without needing SBI files. [No $ PSX Emu](https://problemkaputt.de/psx.htm) works great (even on Linux with [Lutris/wine](https://lutris.net/)). So does [DuckStation](https://www.duckstation.org/) if you enable the `Allow Booting Without SBI File` option found in the advanced settings. PS3/PS Vita, etc all work.
+If you know of a game/revision this patcher does not yet support, can supply a better patch for a game, found an issue with an existing patch, or improve something else, please open a [Github issue](https://github.com/alex-free/libcrypt-patcher/issues). 
 
-If you know of a game/revision this patcher does not yet support, can supply a better patch for a game, or improve something else, open a [Github issue](https://github.com/alex-free/libcrypt-patcher/issues).
+**My goal is to kill this protection once and for all.** This patcher aims to support every regional release, revision, protoype, and beta disc image containing LibCrypt!
+
+## Links
+
+| [GitHub](https://github.com/alex-free/libcrypt-patcher) | [Homepage](https://alex-free.github.io/libcrypt-patcher) | [GBATemp Thread](https://gbatemp.net/threads/libcrypt-patcher-single-executable-capable-of-patching-222-psx-game-discs.642132/) |
 
 ## Table Of Contents
 
@@ -18,38 +22,33 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 *   [License](#license)
 *   [Building From Source](build.md)
 
-## Links
-
-| [GitHub](https://github.com/alex-free/libcrypt-patcher) | [Homepage](https://alex-free.github.io/libcrypt-patcher) | [GBATemp Thread](https://gbatemp.net/threads/libcrypt-patcher-single-executable-capable-of-patching-222-psx-game-discs.642132/) |
-
 ## Downloads
 
-## Version 1.0.6 (4/23/2024)
+## Version 1.0.7 (5/7/2024)
 
 Changes:
 
-*   Implemented [smaller less intrusive patches](https://github.com/alex-free/libcrypt-patcher/issues/5) for Les Cochons de Guerre (France) Rev 0 and Rev 1, (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)).
+*   Implemented a [patch](https://github.com/alex-free/libcrypt-patcher/issues/6) for Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999), (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)). As of this moment, every LibCrypt game I am aware of is supported!
 
-*   Added support for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), and [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/),
- (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)).
+* Improved instructions on [DuckStation emulator configuration for patched disc images](#duckstation-specific-instructions).
 
 ----------------------------------------------------
 
-*	[libcrypt-patcher-v1.0.6-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.7-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.6-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+*	[libcrypt-patcher-v1.0.7-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
 
-*	[libcrypt-patcher-v1.0.6-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.7-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.6-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.7-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.6-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.0.7-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
 
-*	[libcrypt-patcher-v1.0.6-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.6/libcrypt-patcher-v1.0.6-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.0.7-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
 
 ---------------------------------------
 
-[About Previous Versions](changelog.md)
+[Previous Versions](changelog.md)
 
 ## Usage
 
@@ -73,6 +72,17 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 
 ![lcp linux ff9](images/lcp-linux-ff9.png)
 
+### DuckStation Specific Instructions
+
+Duckstation needs some configuration before the patched disc image will work:
+
+1) In `Settings`->`Advanced`->`Tweaks/Hacks` **scroll down and check** `Allow booting without SBI File`.
+
+![duckstation allow booting without sbi file](images/duckstation-allow-booting-without-sbi-file.png)
+
+2) (For Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999) only!!) - In `Settings`->`Console`->`CPU Mode` **assign `Execution Mode` to `Interpreter (Slowest)`**. This is needed to a **work around a [bug in DuckStation](https://github.com/alex-free/libcrypt-patcher/issues/6) specific to only Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999) and is not neccesary for any other disc image.**
+
+![duckstation execution mode interpreter](images/duckstation-execution-mode-interpreter.png)
 ## Supported Games
 
 [Actua Ice Hockey 2 (Europe)](http://redump.org/disc/5120/)
@@ -273,6 +283,8 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 [Formula One 99 (Europe) (En,Fr,De,It)](http://redump.org/disc/969/)
 
 [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/)
+
+Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999) - find it on hiddenpalace, no redump page exists!
 
 [Frontschweine (Germany)](http://redump.org/disc/19539/)
 
@@ -552,17 +564,23 @@ Alternatively you may start your terminal and run `lcp` with the first/only data
 
 ### Icarus/Paradox
 
-Massive thankyou to Icarus/Paradox for releasing the PPF source under open terms:
+**Massive** thanks to Icarus/Paradox for releasing the PPF source under open terms:
 
-***************************
- ApplyPPF3.c (Linux Version)
- written by Icarus/Paradox
- Big Endian support by Hu Kares.
- Applies PPF1.0, PPF2.0 & PPF3.0 Patches (including PPF3.0 Undo support)
- Feel free to use this source in and for your own programms.
-***************************
+`***************************`
 
- I was able to change `applyppf3_linux.c` into a small C library that I could call into from a function, applying internally contained `const unsigned char` arrays based on boot file/version detection hence making this whole thing possible once I assembled all of the PPF patches.
+`ApplyPPF3.c (Linux Version)`
+
+`written by Icarus/Paradox`
+
+`Big Endian support by Hu Kares.`
+
+`Applies PPF1.0, PPF2.0 & PPF3.0 Patches (including PPF3.0 Undo support)`
+
+`Feel free to use this source in and for your own programms.`
+
+`***************************`
+
+ I was able to change `applyppf3_linux.c` (I have included the full PPF Paradox distribution in the source code for reference, see the `pdx-ppf3` directory) into a small C library (filename is `libppf.c`) that I could call into from a function, applying internally contained `const unsigned char` arrays based on boot file/version detection hence making this whole thing possible once I assembled all of the PPF patches.
 
  ### [Agrippa](https://www.psx-place.com/members/agrippa.40805/)
 
@@ -572,10 +590,17 @@ Massive thankyou to Icarus/Paradox for releasing the PPF source under open terms
 
 Posted about [an archive](https://gbatemp.net/threads/new-mode-to-fix-ps1-games-for-psp-and-psvita.607286/page-19#post-10261296) of LibCrypt patches, making this very easy to put together once all documented and configured.
 
+### [LittleMouse1968](https://github.com/Littlemouse1968)
+
+Wrote patches for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/), and Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999).
+
+Provided an improved patch for [Les Cochons de Guerre (France) Rev 0](http://redump.org/disc/33070/) and [Les Cochons de Guerre (France) Rev 1](http://redump.org/disc/99695/).
+
+
 ### Everyone Else Who Did The Original Patches
 
 Thanks to your work, I was able to put all of this together! I hope to better document the patch credits in a future update.
 
 ## License
 
-Libcrypt Patcher is released under the 3-BSD license, see the file `license.txt` (found in each release) for full info.
+Libcrypt Patcher is released under the 3-BSD license, see the file [license.md](license.md) for complete information.

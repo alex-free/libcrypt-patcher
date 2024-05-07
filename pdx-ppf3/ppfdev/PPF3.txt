@@ -1,0 +1,103 @@
+.-----------------------------------------------------------------.
+| PLAYSTATION PATCH FILE VERSION 3.0 FILE-STRUCTURE FOR DEVELOPERS|
+'-----------------------------------------------------------------'
+
+1. The PPF 3.0 Header:
+
+@START_PPF30HEADER
+.----------+--------+----------------------------------------------.
+| POSITION |  SIZE  |              E X P L A N A T I O N           |
++----------|--------|----------------------------------------------+
+| 00-04    |   05   | PPF-Magic: "PPF30"                           |
++----------|--------|----------------------------------------------+
+| 05       |   01   | Encoding Method:                             |
+|          |        | - 0x00 = is a PPF 1.0 Patch                  |
+|          |        | - 0x01 = is a PPF 2.0 Patch                  |
+|          |        | - 0x02 = is a PPF 3.0 Patch                  |
++----------|--------|----------------------------------------------+
+| 06-55    |   50   | Patch Description                            |
++----------|--------|----------------------------------------------+
+| 56       |   01   | Imagetype:                                   |
+|          |        | - 0x00 = BIN (any)                           |
+|          |        | - 0x01 = GI (PrimoDVD)                       |
++----------|--------|----------------------------------------------+
+| 57       |   01   | Blockcheck/Patchvalidation:                  |
+|          |        | - 0x00 = Disabled                            |
+|          |        | - 0x01 = Enabled                             |
+|          |        | If disabled applyppf won't validate the patch|
+|          |        | also the 1024 byte block won't be available. |
++----------|--------|----------------------------------------------+
+| 58       |   01   | Undo data:                                   |
+|          |        | - 0x00 = Not available                       |
+|          |        | - 0x01 = Available                           |
+|          |        | If available applyppf will be able to        |
+|          |        | restore a previous patched bin to back to its|
+|          |        | original state. Patchsize increases of course|
++----------|--------|----------------------------------------------+
+| 59       |   01   | Dummy:                                       |
+|          |        | Not used.                                    |
++----------|--------|----------------------------------------------+
+| 60-1083  | 1024   | Binary block:                                |
+|          |        | It is used for patchvalidation.              |
+|          |        | If Imagetype = 0x00 then its data starting   |
+|          |        | from 0x9320.                                 |
+|          |        | If Imagetype = 0x01 then its data starting   |
+|          |        | from 0x80A0.                                 |
+|          |        | If Blockcheck = 0x00 then this block won't be|
+|          |        | available.                                   |
++----------|--------|----------------------------------------------+
+| 1084-X   |   XX   | The Patch itself.. see below for structure!  |
+'----------+--------+----------------------------------------------'
+@END_PPF30HEADER - TOTAL HEADER-SIZE = 1084 BYTE with validation and
+                                         60 BYTE without validation.
+
+
+2. The PPF 3.0 Patch Itself (Encoding Method #2)
+
+@START_PPF30PATCH
+
+FORMAT : yyyyyyyyyyyyyyyy , zz , dd/uu[..]
+
+         yyyyyyyyyyyyyyyy  = Offset in file. [64 bit integer]
+         zz                = Number of bytes that will be changed. [u_char]
+         dd/uu             = Patch data following undo data (if present) [char array]
+         
+EXAMPLES:
+
+Starting from file offset 0x15F9D0 replace 3 byte with 01,02,03:
+D0 F9 15 00 00 00 00 00 - 03 - 01 02 03
+
+Starting from file offset 0x15F9D0 undo 3 byte to 0A,0A,0A which
+were formerly patched to 01,02,03:
+
+D0 F9 15 00 00 00 00 00 - 03 - 01 02 03 0A 0A 0A
+
+PPF3.0 is able to patch binfiles up to:
+9,223,372,036,854,775,807 byte.
+
+Be careful! Endian format is Intel!
+@END_PPF30PATCH
+
+
+3. The PPF 3.0 Fileid area
+
+@START_FILEID
+
+The fileid area is used to store additional patch information of
+the PPF 3.0 file. I implemented this following the AMIGA standard
+of adding a fileid to e.g. .txt files. You dont have to add a
+FILE_ID to the PPF 3.0 patch. It for your pleasure only!
+
+For developers:
+A file_id area begins with @BEGIN_FILE_ID.DIZ and ends with
+@END_FILE_ID.DIZ (Amiga BBS standard). Between @BEGIN_FILE_ID.DIZ
+and @END_FILE_ID.DIZ you will find the File_Id and followed after
+@END_FILE_ID.DIZ you will find an unsigned short (2 byte) with the length
+of the FILE_ID.DIZ!
+
+A File_ID.diz file cannot exceed 3072 byte.
+
+If you want to do a PPF3.0 Applier be sure to check for an
+existing FILE_ID area, because it is located after the PATCH DATA!
+
+@END_FILEID

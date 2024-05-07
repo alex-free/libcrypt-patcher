@@ -8,7 +8,7 @@ This patcher is capable of detecting and patching **237 different PSX game discs
 
 If you know of a game/revision this patcher does not yet support, can supply a better patch for a game, found an issue with an existing patch, or improve something else, please open a [Github issue](https://github.com/alex-free/libcrypt-patcher/issues). 
 
-**My goal is to kill this protection once and for all.** This patcher aims to support every regional release, revision, protoype, and beta disc image containing LibCrypt!
+**My goal is to kill this protection once and for all.** This patcher aims to support every regional release, revision, prototype, and beta disc image containing LibCrypt!
 
 ## Links
 
@@ -28,7 +28,7 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 Changes:
 
-*   Implemented a [patch](https://github.com/alex-free/libcrypt-patcher/issues/6) for Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999), (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)). As of this moment, every LibCrypt game I am aware of is supported!
+*   Implemented a [patch](https://github.com/alex-free/libcrypt-patcher/issues/6) for Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999), (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)). As of this moment, every LibCrypt game I am aware of is supported!
 
 * Improved instructions on [DuckStation emulator configuration for patched disc images](#duckstation-specific-instructions).
 
@@ -80,7 +80,7 @@ Duckstation needs some configuration before the patched disc image will work:
 
 ![duckstation allow booting without sbi file](images/duckstation-allow-booting-without-sbi-file.png)
 
-2) (For Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999) only!!) - In `Settings`->`Console`->`CPU Mode` **assign `Execution Mode` to `Interpreter (Slowest)`**. This is needed to a **work around a [bug in DuckStation](https://github.com/alex-free/libcrypt-patcher/issues/6) specific to only Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999) and is not neccesary for any other disc image.**
+2) (For Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) only!!) - In `Settings`->`Console`->`CPU Mode` **assign `Execution Mode` to `Interpreter (Slowest)`**. This is needed to a **work around a [bug in DuckStation](https://github.com/alex-free/libcrypt-patcher/issues/6) specific to only Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) and is not neccesary for any other disc image.**
 
 ![duckstation execution mode interpreter](images/duckstation-execution-mode-interpreter.png)
 ## Supported Games
@@ -284,7 +284,7 @@ Duckstation needs some configuration before the patched disc image will work:
 
 [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/)
 
-Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999) - find it on hiddenpalace, no redump page exists!
+Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) - find it on hiddenpalace, no redump page exists!
 
 [Frontschweine (Germany)](http://redump.org/disc/19539/)
 
@@ -592,7 +592,7 @@ Posted about [an archive](https://gbatemp.net/threads/new-mode-to-fix-ps1-games-
 
 ### [LittleMouse1968](https://github.com/Littlemouse1968)
 
-Wrote patches for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/), and Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999).
+Wrote patches for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/), and Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999).
 
 Provided an improved patch for [Les Cochons de Guerre (France) Rev 0](http://redump.org/disc/33070/) and [Les Cochons de Guerre (France) Rev 1](http://redump.org/disc/99695/).
 

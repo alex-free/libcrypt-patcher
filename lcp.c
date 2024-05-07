@@ -16,7 +16,7 @@ const unsigned char SCES[] = {
 };
 
 const unsigned char SLES[] = { 
-    0x53, 0x4C, 0x45, 0x53 // SLES (We do not check for underscore because the August 19th 1999 Protoype Formula 1 '99 bootfile name line in SYSTEM.CNF is BOOT = cdrom:\SLES1979.02;1)
+    0x53, 0x4C, 0x45, 0x53 // SLES (We do not check for underscore because the  Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) bootfile name line in SYSTEM.CNF is BOOT = cdrom:\SLES1979.02;1)
 };
 
 #if defined WIN32 // system("pause"); sucks we can do better
@@ -540,7 +540,7 @@ int main (int argc, const char * argv[])
 		}
 	}
 	
-	// Formula One 99 (Europe) (En,Fr,De,It) (Protoype 8/12/1999)
+	// Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999)
 	else if((strcmp(bootfile, "SLES1979.02") == 0))
 	{
 		apply_ppf(SLES1979_02_PROTOTYPE_PPF, SLES1979_02_PROTOTYPE_PPF_len, bin);

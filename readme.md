@@ -83,7 +83,17 @@ Duckstation needs some configuration before the patched disc image will work:
 2) (For Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) only!!) - In `Settings`->`Console`->`CPU Mode` **assign `Execution Mode` to `Interpreter (Slowest)`**. This is needed to a **work around a [bug in DuckStation](https://github.com/alex-free/libcrypt-patcher/issues/6) specific to only Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) and is not neccesary for any other disc image.**
 
 ![duckstation execution mode interpreter](images/duckstation-execution-mode-interpreter.png)
+
 ## Supported Games
+
+Note: For Final Fantasy VIII and IX, when asked to insert the next disc during gameplay:
+
+1) Make sure you have saved the game right before the game asks you to insert the next disc.
+2) Power off the console. Remove the current disc and put in the next disc with the console off.
+3) Start your console and boot the next disc.
+4) Load the last save game you made while you were using the previous disc and continue.
+
+This is required because the current patches do not patch out the check while in the disc change feature.
 
 [Actua Ice Hockey 2 (Europe)](http://redump.org/disc/5120/)
 

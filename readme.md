@@ -24,27 +24,25 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 ## Downloads
 
-## Version 1.0.7 (5/7/2024)
+## Version 1.0.8 (5/29/2024)
 
 Changes:
 
-*   Implemented a [patch](https://github.com/alex-free/libcrypt-patcher/issues/6) for Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999), (thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)). As of this moment, every LibCrypt game I am aware of is supported!
-
-* Improved instructions on [DuckStation emulator configuration for patched disc images](#duckstation-specific-instructions).
+*   Implemented new patches for [Final Fantasy IX](https://github.com/alex-free/libcrypt-patcher/issues/7) thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)). These patches fix an issue that caused the game to lock up when you need to change to the next disc (this is a game spanning 4 different CD-ROMs). The new patches now work perfect.
 
 ----------------------------------------------------
 
-*	[libcrypt-patcher-v1.0.7-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.8-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.7-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+*	[libcrypt-patcher-v1.0.8-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
 
-*	[libcrypt-patcher-v1.0.7-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.8-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.7-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.0.8-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.7-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.0.8-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
 
-*	[libcrypt-patcher-v1.0.7-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.7/libcrypt-patcher-v1.0.7-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.0.8-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
 
 ---------------------------------------
 
@@ -64,13 +62,13 @@ Alternatively you may run `cmd.exe` or `command.com` and run `lcp.exe` with the 
 
 ### Linux
 
-The easiest way to use this on Linux (If your desktop environment supports it that is) is to simply drag the first/only data track bin file of the LibCrypt protected CD image onto the `lcp` executable file.
+For use on Linux, you have a variety of options:
 
-Alternatively you may start your terminal and run `lcp` with the first/only data track bin file as the sole argument. This usage method is recommended if you use the `.deb` package.
+1) Install the `.deb` package and execute it as a standard command (`lcp`), with the first/only data track bin file as the sole argument.
+2) Unzip the portable `.zip` and execute the `lcp` command within the release, with the first/only data track bin file as the sole argument.
+3) Drag the first/only data track bin file of the LibCrypt protected CD image onto the `lcp` executable file (only supported by some Linux window managers).
 
 ![lcp linux spyro](images/lcp-linux-spyro.png)
-
-![lcp linux ff9](images/lcp-linux-ff9.png)
 
 ### DuckStation Specific Instructions
 
@@ -85,15 +83,6 @@ Duckstation needs some configuration before the patched disc image will work:
 ![duckstation execution mode interpreter](images/duckstation-execution-mode-interpreter.png)
 
 ## Supported Games
-
-Note: For Final Fantasy VIII and IX, when asked to insert the next disc during gameplay:
-
-1) Make sure you have saved the game right before the game asks you to insert the next disc.
-2) Power off the console. Remove the current disc and put in the next disc with the console off.
-3) Start your console and boot the next disc.
-4) Load the last save game you made while you were using the previous disc and continue.
-
-This is required because the current patches do not patch out the check while in the disc change feature.
 
 [Actua Ice Hockey 2 (Europe)](http://redump.org/disc/5120/)
 
@@ -170,7 +159,6 @@ This is required because the current patches do not patch out the check while in
 [Disney Fais Ton Histoire! Mulan (France)](http://redump.org/disc/27819/)
 
 [Disney Libro Animato Creativo: Mulan (Italy)](http://redump.org/disc/28327/)
-
 
 [Disney's Tarzan (Europe)](http://redump.org/disc/29818/)
 
@@ -602,10 +590,11 @@ Posted about [an archive](https://gbatemp.net/threads/new-mode-to-fix-ps1-games-
 
 ### [LittleMouse1968](https://github.com/Littlemouse1968)
 
-Wrote patches for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/), and Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999).
+*   Wrote patches for [Formula One 99 (Europe) (En,Fr,De,It) (Beta 9/9/1999)](http://redump.org/disc/64499/), [Space Debris (Germany) (Beta 11/11/1999)](http://redump.org/disc/85814/), [LMA Manager 2001 (Europe) (Beta 02/26/2001)](http://redump.org/disc/92303/), and Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999).
 
-Provided an improved patch for [Les Cochons de Guerre (France) Rev 0](http://redump.org/disc/33070/) and [Les Cochons de Guerre (France) Rev 1](http://redump.org/disc/99695/).
+*   Provided an improved patch for [Les Cochons de Guerre (France) Rev 0](http://redump.org/disc/33070/) and [Les Cochons de Guerre (France) Rev 1](http://redump.org/disc/99695/).
 
+*   Provided all new Final Fantasy IX patches, fixing an issue older patches (including Paradox!) had when changing to the next disc in the game.
 
 ### Everyone Else Who Did The Original Patches
 

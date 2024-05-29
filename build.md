@@ -1,5 +1,6 @@
+# [LibCrypt Patcher](readme.md) ->Building From Source
 
-# Building From Source
+To regenerate ppf c header files from the ppf patches, execute `./genh.sh`.
 
 In the source directory, you may execute any of the following:
 

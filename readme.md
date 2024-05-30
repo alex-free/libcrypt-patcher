@@ -102,7 +102,7 @@ Duckstation needs some configuration before the patched disc image will work:
 
 [Barbie: Aventure Equestre (France)](http://redump.org/disc/29560/)
 
-[Barbie: Race & Ride (Europe)](http://redump.org/disc/11318/))
+[Barbie: Race & Ride (Europe)](http://redump.org/disc/11318/)
 
 [Barbie: Race & Ride (Germany)](http://redump.org/disc/25241/)
 
@@ -488,7 +488,7 @@ Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) - find it on hiddenp
 
 [Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (Rev 0)](http://redump.org/disc/492/)
 
-[Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (Rev 1](http://redump.org/disc/19611/)
+[Spyro: Year of the Dragon (Europe) (En,Fr,De,Es,It) (Rev 1)](http://redump.org/disc/19611/)
 
 [Spyro 2: Gateway to Glimmer (Europe) (En,Fr,De,Es,It)](http://redump.org/disc/1250/)
 

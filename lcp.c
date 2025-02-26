@@ -10,6 +10,7 @@ unsigned char sectors[0x1800]; // 0x800 * 3
 unsigned char ver_check_val; // for games that have the same bootfile we use the first different byte to detect different revisions/versions
 
 bool match_SCES, match_SLES;
+bool match_SCES_018_82 = false;
 
 const unsigned char SCES[] = { 
     0x53, 0x43, 0x45, 0x53, 0x5F // SCES_
@@ -17,6 +18,10 @@ const unsigned char SCES[] = {
 
 const unsigned char SLES[] = { 
     0x53, 0x4C, 0x45, 0x53 // SLES (We do not check for underscore because the  Formula One 99 (Europe) (En,Fr,De,It) (prototype 8/12/1999) bootfile name line in SYSTEM.CNF is BOOT = cdrom:\SLES1979.02;1)
+};
+
+const unsigned char SCES_018_82[] = {
+    0x53, 0x43, 0x45, 0x53, 0x5F, 0x30, 0x31, 0x38, 0x2E, 0x38, 0x32 // SCES_018.82
 };
 
 #if defined WIN32 // system("pause"); sucks we can do better
@@ -40,11 +45,13 @@ void do_exit(unsigned char exit_code)
 int main (int argc, const char * argv[]) 
 {
 	unsigned int bin_size;
-    printf("LibCrypt Patcher %s By Alex Free (C)2023-2024 (3-BSD)\nhttps://alex-free.github.io/libcrypt-patcher\n\n", VERSION);
+    
+    printf("LibCrypt Patcher %s\n(C)2023-2025, Alex Free (3-BSD)\nhttps://github.com/alex-free/libcrypt-patcher\n\n", VERSION);
 
-    if(argc != 2) {
-        printf("incorrect number of arguments\n\nUsage:\n\nlcp <track 1 bin file of libcrypt protected game>\n");
-		do_exit(1);
+    if(argc != 2)
+    {
+       printf("Error: one argument is required.\n");
+       do_exit(1); 
     }
 
     bin = fopen(argv[1], "rb+");
@@ -52,7 +59,7 @@ int main (int argc, const char * argv[])
     if(bin == NULL)
     {
         printf("Error: Can not open: %s\n", argv[1]);
-		do_exit(1);
+	    do_exit(1);
     }
 
     fseek(bin, 0, SEEK_END);
@@ -62,14 +69,17 @@ int main (int argc, const char * argv[])
     {
 	    printf("Error: %s is too small to be a patchable track 01 bin file\n", argv[1]);
         fclose(bin);        
-		do_exit(1);
+	    do_exit(1);
     }
-	unsigned char psx_string[] = {
-		0x50, 0x4C, 0x41, 0x59, 0x53, 0x54, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x20 // PLAYSTATION<space>
-	};
 
-	bool is_psx_string;
-	is_psx_string = true;
+    fseek(bin, 0, SEEK_END);
+
+    unsigned char psx_string[] = {
+    0x50, 0x4C, 0x41, 0x59, 0x53, 0x54, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x20 // PLAYSTATION<space>
+    };
+
+    bool is_psx_string;
+    is_psx_string = true;
 
 	unsigned char check;
 
@@ -91,51 +101,82 @@ int main (int argc, const char * argv[])
 		do_exit(1);
 	}
 
-    fseek(bin, (0xCA20 + 0x18), SEEK_SET);// 0x930 * 22 = Directory Record Sector + 0x18 to skip header
+  	char bootfile[12];
+
+    if(bin_size >= (0x930 * 288216) ) // http://redump.org/disc/19757/ This Is Football (Fr, Nl) has the executable 'SCES_018.82' in a folder named 'FOOTBALL'. This means it is not in the root directory record (??), and is in another directory record sector range. The below code accounts for this but it kinda sucks and could be improved.
+    {
+        char SCES_018_82_TEST[11];
+        fseek(bin, 0x288D68B, SEEK_SET);
+
+        match_SCES_018_82 = true;
+        for(int i=0; i < 11; i++)
+        {     
+            SCES_018_82_TEST[i] = fgetc(bin);
             
-    for(int directory_record_sector = 0; directory_record_sector < 3; directory_record_sector++){
-        //printf("\n\nDirectory Record Sector %d\n\n", directory_record_sector);        
-        for(int i=0; i < 0x800; i++)
-        {
-            sectors[i + (directory_record_sector * 0x800)] = fgetc(bin);
-            //printf("%02X ", sectors[i + (directory_record_sector * 0x800)]);
-            //printf("Directory Sector Multi: %d\n", (directory_record_sector * 0x800)) ;
+            if(SCES_018_82_TEST[i] != SCES_018_82[i])
+             {
+                match_SCES_018_82 = false;
+            }
         }
-        fseek(bin, (0x118 + 0x18), SEEK_CUR); // skip EDC/EEC/Header
+
+        if(match_SCES_018_82)
+        {
+            for(int i=0; i < 11; i++)
+            { 
+                bootfile[i] = SCES_018_82[i];
+            }
+
+            bootfile[11] = '\0'; // add termination
+            printf("BOOTFILE: %s\n", bootfile);
+        }
     }
 
-    fseek(bin, 0, SEEK_SET);
-
-   	char bootfile[12];
-
-    for(int s=0; s < 0x1800; s++){
-
-        match_SCES = true;
-        for(int i=0; i < 5; i++)
-        {                
-            if((SCES[i] != sectors[s + i]))
+    if(!match_SCES_018_82)
+    {
+        fseek(bin, (0xCA20 + 0x18), SEEK_SET);// 0x930 * 22 = Directory Record Sector + 0x18 to skip header
+                
+        for(int directory_record_sector = 0; directory_record_sector < 3; directory_record_sector++){
+            //printf("\n\nDirectory Record Sector %d\n\n", directory_record_sector);        
+            for(int i=0; i < 0x800; i++)
             {
-                match_SCES = false;
+                sectors[i + (directory_record_sector * 0x800)] = fgetc(bin);
+                //printf("%02X ", sectors[i + (directory_record_sector * 0x800)]);
+                //printf("Directory Sector Multi: %d\n", (directory_record_sector * 0x800)) ;
             }
-        }
-        
-        match_SLES = true;
-        for(int i=0; i < 4; i++)
-        {                
-            if((SLES[i] != sectors[s + i]))
-            {
-                match_SLES = false;
-            }
+            fseek(bin, (0x118 + 0x18), SEEK_CUR); // skip EDC/EEC/Header
         }
 
-        if((match_SCES) || (match_SLES))
-        {
-            for(int i = 0; i < 11; i++)
-            {
-                bootfile[i] = sectors[s + i];
+        fseek(bin, 0, SEEK_SET);
+
+        for(int s=0; s < 0x1800; s++){
+
+            match_SCES = true;
+            for(int i=0; i < 5; i++)
+            {                
+                if((SCES[i] != sectors[s + i]))
+                {
+                    match_SCES = false;
+                }
             }
-            printf("BOOTFILE: %s\n", bootfile);
-            break;
+            
+            match_SLES = true;
+            for(int i=0; i < 4; i++)
+            {                
+                if((SLES[i] != sectors[s + i]))
+                {
+                    match_SLES = false;
+                }
+            }
+
+            if((match_SCES) || (match_SLES))
+            {
+                for(int i = 0; i < 11; i++)
+                {
+                    bootfile[i] = sectors[s + i];
+                }
+                printf("BOOTFILE: %s\n", bootfile);
+                break;
+            }
         }
     }
 

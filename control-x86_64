@@ -1,6 +1,6 @@
 Package: libcrypt-patcher
-Version: 1.0.8
+Version: 1.0.9
 Maintainer: Alex Free
 Architecture: amd64
-Homepage: https://alex-free.github.io/libcrypt-patcher
-Description: The ultimate all in one libcrypt disc image patcher.
+Homepage: https://github.com/alex-free/libcrypt-patcher
+Description: The ultimate all in one Libcrypt patcher for PSX disc images.

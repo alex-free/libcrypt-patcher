@@ -1,5 +1,25 @@
 # [LibCrypt Patcher](readme.md) -> Changelog
 
+## Version 1.0.8 (5/29/2024)
+
+Changes:
+
+*   Implemented new patches for [Final Fantasy IX](https://github.com/alex-free/libcrypt-patcher/issues/7) thanks to [@Littlemouse1968](https://github.com/Littlemouse1968)). These patches fix an issue that caused the game to lock up when you need to change to the next disc (this is a game spanning 4 different CD-ROMs). The new patches now work perfect.
+
+----------------------------------------------------
+
+*	[libcrypt-patcher-v1.0.8-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.8-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+
+*	[libcrypt-patcher-v1.0.8-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.8-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+
+*	[libcrypt-patcher-v1.0.8-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+
+*	[libcrypt-patcher-v1.0.8-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.8/libcrypt-patcher-v1.0.8-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
 ## Version 1.0.7 (5/7/2024)
 
 Changes:

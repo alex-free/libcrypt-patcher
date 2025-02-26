@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if ! command -v xxd >/dev/null; then
+    if command -v dnf > /dev/null; then
+        echo "Root privilages are required to install dependencies:"
+        sudo dnf -y update
+        sudo dnf -y install vim-common
+    fi
+fi
+
 cd "$(dirname "$0")"/ppf-patches
 rm -rf ../ppf-c
 mkdir ../ppf-c

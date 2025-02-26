@@ -1,0 +1,15 @@
+Alex Free
+lcp
+1.0.9
+The ultimate all in one Libcrypt patcher for PSX disc images.
+3-BSD
+https://github.com/alex-free/libcrypt-patcher
+libcrypt-patcher
+*.md images
+build-essential g++-multilib gcc-multilib mingw-w64-tools g++-mingw-w64 zip dpkg-dev rpm
+gcc g++ libstdc++-static.i686 glibc-static.i686 libstdc++-static.x86_64 mingw64-gcc mingw32-gcc mingw32-gcc-c++ mingw64-gcc-c++ zip
+mingw-w64
+gcc
+-Wall -Wextra -Werror -pedantic -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE
+-Wall -Wextra -Werror -pedantic -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -static
+lcp.c

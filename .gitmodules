@@ -1,0 +1,3 @@
+[submodule "lib-enigma"]
+	path = lib-enigma
+	url = https://github.com/alex-free/lib-enigma

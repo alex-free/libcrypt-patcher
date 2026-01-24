@@ -10,6 +10,8 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 **My goal is to kill this protection once and for all.** This patcher aims to support every regional release, revision, prototype, and beta disc image containing LibCrypt!
 
+At this time, this patcher ONLY supports games with LibCrypt protection. Games that have other types of protection can be played with [Tonyhax International](https://github.com/alex-free/tonyhax-international)'s anti-piracy bypass system. One way that can be used is, you can just boot the Tonyhax International Boot CD first, then the protected game.
+
 ## Links
 
 | [GitHub](https://github.com/alex-free/libcrypt-patcher) | [Homepage](https://alex-free.github.io/libcrypt-patcher) | [GBATemp Thread](https://gbatemp.net/threads/libcrypt-patcher-single-executable-capable-of-patching-222-psx-game-discs.642132/) |
@@ -24,37 +26,37 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 ## Downloads
 
-## Version 1.0.9 (2/26/2025)
+## Version 1.1.0 (1/24/2026)
 
 Changes:
 
-* Implemented new patches for [Final Fantasy VIII](https://github.com/alex-free/libcrypt-patcher/issues/14) thanks to [@davidmorom](https://github.com/davidmorom) (Europe, Spain, and Germany). These patches fix an issue that caused the game to lock up when you need to change to the next disc (this is a game spanning 4 different CD-ROMs). The new patches now work perfect.
+* Replace boot file detection code with my own library, [lib-enigma](https://github.com/alex-free/lib-enigma). This solves many issues where the patcher would previously crash on certain games, or not detect the game properly.
 
-* Fixed an [issue](https://github.com/alex-free/libcrypt-patcher/issues/12) where patching [This Is Football (Europe)](http://redump.org/disc/19757/) crashed the patcher.
+* Replace internal lib-ppf with my own library, [lib-enigma](https://github.com/alex-free/lib-enigma).
 
-* Updated the [EzRe](https://github.com/alex-free/ezre) build system to version 1.0.7. A Mac OS build is now available and can be compiled from source. RPM package files are now also available for Linux.
-
-* Better arg parsing.
+* Update [EzRe](https://github.com/alex-free/ezre) build system to v1.1.6.
 
 ----------------------------------------------------
 
-*	[libcrypt-patcher-v1.0.9-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.1.0-windows-i686-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.9-mac-os-x86_64.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-mac-os-x86_64.zip) _Portable Release For Mac OS 10.12 and above, x86_64 (64 bit)_
+*	[libcrypt-patcher-v1.1.0-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
 
-*	[libcrypt-patcher-v1.0.9-windows-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+*	[libcrypt-patcher-v1.1.0-mac-os-i386.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-mac-os-i386.zip) _Portable Release For Mac OS 10.4 and above, i386 (32 bit)_
 
-*	[libcrypt-patcher-v1.0.9-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.1.0-mac-os-x86_64.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-mac-os-x86_64.zip) _Portable Release For Mac OS 10.12 and above, x86_64 (64 bit)_
 
-*	[libcrypt-patcher-v1.0.9-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.1.0-linux-i386-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-1.0.9-1.i386.rpm](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-1.0.9-1.i386.rpm) _RPM package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+*	[libcrypt-patcher-v1.1.0-linux-i386-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.9-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.1.0-1.i386.rpm](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-1.i386.rpm) _RPM package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[libcrypt-patcher-v1.0.9-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-v1.0.9-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+*	[libcrypt-patcher-v1.1.0-linux-x86\_64-static.zip](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
 
-*	[libcrypt-patcher-1.0.9-1.x86_64.rpm](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.0.9/libcrypt-patcher-1.0.9-1.x86_64.rpm) _RPM package file For Linux 3.2.0 and above, x86_64 CPU minimum (64 bit)_
+*	[libcrypt-patcher-v1.1.0-linux-x86\_64-static.deb](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
+*	[libcrypt-patcher-v1.1.0-1.x86_64.rpm](https://github.com/alex-free/libcrypt-patcher/releases/download/v1.1.0/libcrypt-patcher-v1.1.0-1.x86_64.rpm) _RPM package file For Linux 3.2.0 and above, x86_64 CPU minimum (64 bit)_
 
 
 ---------------------------------------

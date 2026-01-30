@@ -10,7 +10,7 @@ If you know of a game/revision this patcher does not yet support, can supply a b
 
 **My goal is to kill this protection once and for all.** This patcher aims to support every regional release, revision, prototype, and beta disc image containing LibCrypt!
 
-At this time, this patcher ONLY supports games with LibCrypt protection. Games that have other types of protection can be played with [Tonyhax International](https://github.com/alex-free/tonyhax-international)'s anti-piracy bypass system. One way that can be used is, you can just boot the Tonyhax International Boot CD first, then the protected game.
+At this time, this patcher ONLY supports games with LibCrypt protection. Games that have other types of protection (mostly released in the USA and Japan) can be played with [Tonyhax International](https://github.com/alex-free/tonyhax)'s anti-piracy bypass system. One way that can be used is, you can just boot the Tonyhax International Boot CD first, then the protected game.
 
 ## Links
 
